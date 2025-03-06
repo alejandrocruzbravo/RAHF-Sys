@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.get('/', (req, res) => {
-    res.render('home');  // Renderiza home.ejs
+    res.render('home'); 
 });
 
 // Iniciar el servidor
