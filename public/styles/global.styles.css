@@ -1,0 +1,30 @@
+body{
+    background-color: whitesmoke;
+}
+
+@font-face {
+    font-family: 'Audiowide'; /* Nombre que usarás para la fuente */
+    src: url('/fonts/Audiowide.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat'; /* Nombre que usarás para la fuente */
+    src: url('/fonts/Montserrat.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.custom-family-text{
+    font-family: 'Audiowide',sans-serif;
+}
+.custom-family-text2{
+    font-family: 'Montserrat',sans-serif;
+}
+.custom-subtitle{
+    font-size:20px;
+    font-weight: bolder;
+}
+.custom-button-primary{
+    background-color: rgb(0, 60, 204);
+}

@@ -1,0 +1,68 @@
+@import url(global.styles.css);
+
+
+.custom-section-first{
+    background-color: rgb(20,22,26);
+    background-image: url('/images/bg-waves.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-sf-div{
+
+    text-align: center;
+}
+
+.custom-section-second{
+    width: 100%;
+    height: auto;
+    background-color: whitesmoke;
+    
+}
+
+.custom-sc-div{
+    margin-top: 30px;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    background-color: rgb(20,22,26);
+}
+.custom-modules{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.custom-section-third{
+    background-color: whitesmoke;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.accordion-button{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: rgb(0, 0, 0);
+    border-radius: 15px;
+    width: 100%;
+    padding: 25px;
+    color:rgb(44, 43, 43)
+}
+.accordion{
+    background-color: whitesmoke; 
+}
+.accordion-content {
+    display: none; /* Ocultar contenido por defecto */
+    overflow: hidden;
+    height: 0; /* Iniciar con altura 0 */
+    transition: height 0.3s ease-out; /* Animación de altura */
+}
+
+.accordion-content.open {
+    display: block;
+    height: auto; /* Dejar que la altura crezca automáticamente */
+}

@@ -1,0 +1,26 @@
+{
+  "name": "rahf-sys",
+  "version": "1.0.0",
+  "description": "Sistema de Registro de Activos Físicos y Herramientas para la gestión del inventario",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejandrocruzbravo/RAHF-Sys.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejandrocruzbravo/RAHF-Sys/issues"
+  },
+  "homepage": "https://github.com/alejandrocruzbravo/RAHF-Sys#readme",
+  "dependencies": {
+    "bulma": "^1.0.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}
