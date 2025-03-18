@@ -1,0 +1,186 @@
+body {
+    background-color: #16161E;
+}
+
+/* Navbar principal (siempre visible en PC) */
+.custom-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #16161E;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    z-index: 1001;
+}
+
+/* Ocultar menú hamburguesa en PC */
+
+.menu-toggle {
+    display: none;
+}
+.menu-list a {
+    background-color: #16161E;
+    color: white;
+    padding: 0.75rem;
+    display: block;
+}
+.menu-list a:hover {
+    background-color: hsl(217, 71%, 53%);
+}
+
+/* Sidebar */
+.custom-aside-bar {
+    width: 20%;
+    height: 100vh;
+    background-color: #16161E;
+    padding: 1rem;
+}
+
+
+/* Contenido principal */
+.custom-main-content {
+    width: 80%;
+    padding-top: 4rem;
+}
+
+.custom-main-section {
+    width: 100%;
+    height: auto;
+    background-color: #1d1f2d;
+    border-radius: 25px;
+    padding: 1rem;
+}
+
+/* Estilos adicionales para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    /* Mostrar menú hamburguesa */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Navbar se oculta en móviles y se mueve al sidebar */
+    .navbar-content {
+        display: none;
+    }
+
+    /* Sidebar se oculta por defecto */
+    .custom-aside-bar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 250px;
+        height: 100vh;
+        transform: translateX(-100%);
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Cuando el menú se abre */
+    .custom-aside-bar.is-active {
+        transform: translateX(0);
+    }
+
+    /* Navbar dentro del sidebar en móviles */
+    .mobile-navbar-content {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .mobile-navbar-content form {
+        margin-bottom: 1rem;
+    }
+
+    /* Ajustar contenido */
+    .custom-main-content {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+.custom-switch {
+    display: none;
+}
+
+.switch-container {
+    display: inline-block;
+    margin: 10px;
+}
+
+.custom-switch + label {
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 25px;
+    background: #777;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.custom-switch + label::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    transition: left 0.3s;
+}
+
+.custom-switch:checked + label {
+    background: #48c774; /* Verde de Bulma */
+}
+
+.custom-switch:checked + label::before {
+    left: 25px;
+}
+
+.switch-icon {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    transition: opacity 0.3s;
+}
+
+.switch-icon.on {
+    opacity: 0;
+}
+
+.custom-switch:checked + label .switch-icon.off {
+    opacity: 0;
+}
+
+.custom-switch:checked + label .switch-icon.on {
+    opacity: 1;
+}
+
+.custom-switch:checked + label::before {
+    left: 25px;
+}
+
+.switch-icon {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    transition: opacity 0.3s;
+}
+
+.custom-switch:checked + label .switch-icon:first-child {
+    opacity: 0;
+}
+
+.custom-switch:not(:checked) + label .switch-icon:last-child {
+    opacity: 0;
+}
+

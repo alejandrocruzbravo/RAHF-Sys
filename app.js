@@ -16,6 +16,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.render('home'); 
 });
+app.get('/dashboard', (req, res) => {
+    const content = req.query.content || 'main'; // Si no hay "content", carga "main.ejs"
+    res.render('dashboard', { content });
+});
+
+
+app.get('/dashboard/:component', (req, res) => {
+    const { component } = req.params;
+    res.render(`components/dsh-components/${component}`);
+});
+
 
 // Iniciar el servidor
 app.listen(port, () => {

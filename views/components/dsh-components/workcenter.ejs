@@ -1,0 +1,258 @@
+<section class="container">
+    <div class="is-flex">
+        <label for="" class="is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-6-fullhd">Centro de
+            trabajo</label>
+        <label for="" class="is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-6-fullhd ml-auto">Institución
+            Educativa</label>
+    </div>
+    <div class="container">
+        <div class="is-flex mt-4 is-align-items-center">
+            <img class="image is-64x64" src="/images/logoEscuela.png" alt="">
+            <h1
+                class="ml-3 has-text-grey-lighter custom-title is-size-5-mobile is-size-5-tablet is-size-5-desktop is-size-5-fullhd">
+                Instituto Tecnológico de Chetumal</h1>
+            <a href="">
+                <img class="ml-2 image is-16x16" src="/icons/editar.png" alt="">
+            </a>
+
+        </div>
+        <div class="columns is-1 mt-2">
+            <div class="column custom-cards custom-shadow-cards-link m-1 custom-cards p-2">
+                <div class="is-flex is-align-items-center">
+                    <h2 class="has-text-grey">Bienes registrados</h2>
+                    <a class="ml-auto" href="">
+                        <img class="image is-16x16" src="/icons/consulta.png" alt="">
+                    </a>
+                </div>
+                <h2 class="is-size-3 has-text-grey-lighter">5,642</h2>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="column m-1 custom-cards custom-shadow-cards-link p-2">
+                <div class="is-flex is-align-items-center">
+                    <h2 class="has-text-grey">Gestores asignados</h2>
+                    <a class="ml-auto" href="">
+                        <img class="image is-16x16" src="/icons/consulta.png" alt="">
+                    </a>
+                </div>
+                <h2 class="is-size-3 has-text-grey-lighter">10</h2>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="column m-1 custom-cards custom-shadow-cards-link p-2">
+                <div class="is-flex is-align-items-center">
+                    <h2 class="has-text-grey">Resguardantes registrados</h2>
+                    <a class="ml-auto" href="">
+                        <img class="image is-16x16 has-text-grey-lighter" src="/icons/consulta.png" alt="">
+                    </a>
+                </div>
+                <h2 class="is-size-3">532</h2>
+            </div>
+        </div>
+        <section class="section">
+            <div class="container custom-border">
+                <div class="p-1">
+                    <div class="is-flex is-align-items-center">
+                        <i class="fa-solid fa-gear" style="color: #e6e6e6;"></i>
+                        <h2 class="has-text-grey-lighter">Configuración de los bienes</h2>
+                    </div>
+                    <div class="is-flex is-flex-direction-column ml-2 p-2" style="align-items: flex-start;">
+                        <button class="custom-button has-text-grey-l open-modal is-responsive" data-target="modal1"> >
+                            Categorias de los bienes registrados</button>
+                        <div class="modal" id="modal1">
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title">Categorias de los bienes registrados</p>
+                                    <button class="delete close-modal" aria-label="close"></button>
+                                </header>
+                                <section class="modal-card-body">
+                                    <form action="" class="is-flex is-align-items-center">
+                                        <input class="input custom-input" type="text" placeholder="Nueva Categoria" />
+                                        <input class="button " type="submit" value="Añadir">
+                                        <div class="switch-container">
+                                            <input type="checkbox" id="switch1" class="custom-switch">
+                                            <label for="switch1"></label>
+                                        </div>
+                                    </form>
+                                    <div class="custom-border mt-2 p-2">
+                                        <table class="table is-fullwidth">
+                                            <tr>
+                                                <th>Categoria</th>
+                                                <th>Acciones</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Mueble de oficina</td>
+                                                <td class="is-flex">
+                                                    <button>
+                                                        <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
+                                                    </button>
+                                                    <button class="ml-3">
+                                                        <i class="fa-solid fa-pen-to-square"
+                                                            style="color: #ffffff;"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Equipo de computo</td>
+                                                <td class="is-flex">
+                                                    <button>
+                                                        <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
+                                                    </button>
+                                                    <button class="ml-3">
+                                                        <i class="fa-solid fa-pen-to-square"
+                                                            style="color: #ffffff;"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jardinería</td>
+                                                <td class="is-flex">
+                                                    <button>
+                                                        <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
+                                                    </button>
+                                                    <button class="ml-3">
+                                                        <i class="fa-solid fa-pen-to-square"
+                                                            style="color: #ffffff;"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </section>
+                                <footer class="modal-card-foot">
+                                    <button class="button is-success">Aceptar</button>
+                                    <button class="button close-modal">Cancelar</button>
+                                </footer>
+                            </div>
+                        </div>
+                        <button class="custom-button has-text-grey-l open-modal is-responsive" data-target="modal2"> >
+                            Políticas de transferencias</button>
+                        <div class="modal" id="modal2">
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title">Políticas de transferencias</p>
+                                    <button class="delete close-modal" aria-label="close"></button>
+                                </header>
+                                <section class="modal-card-body">
+                                    <div>
+                                        <form action="">
+                                            <label for="">Por autorización</label>
+                                            <div class="switch-container is-flex is-align-items-center">
+                                                <input type="checkbox" id="switch2" class="custom-switch">
+                                                <label for="switch2"></label>
+                                            </div>
+                                            <label for="">Por notificación</label>
+                                            <div class="switch-container is-flex is-align-items-center">
+                                                <input type="checkbox" id="switch3" class="custom-switch">
+                                                <label for="switch3"></label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </section>
+                                <footer class="modal-card-foot">
+                                    <button class="button is-success">Aceptar</button>
+                                    <button class="button close-modal">Cancelar</button>
+                                </footer>
+                            </div>
+                        </div>
+                        <button class="custom-button has-text-grey-l open-modal is-responsive" data-target="modal3"> >
+                            Claves de identificación de los bienes</button>
+                        <div class="modal" id="modal3">
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title">Claves de identificación de los bienes</p>
+                                    <button class="delete close-modal" aria-label="close"></button>
+                                </header>
+                                <section class="modal-card-body">
+                                    <form action="" class="is-flex is-align-items-center">
+                                        <input class="input custom-input" type="text" placeholder="Nueva clave" />
+                                        <input class="button " type="submit" value="Añadir">
+                                    </form>
+
+
+                                    <div class="custom-border mt-2 p-2">
+                                        <table class="table is-fullwidth">
+                                            <tr>
+                                                <th>Nombre</th>
+                                                <th>Clave</th>
+                                                <th>Acciones</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Primera clave</td>
+                                                <td>xxxx-xxxx-xxxx</td>
+                                                <td class="is-flex">
+                                                    <button>
+                                                        <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
+                                                    </button>
+                                                    <button class="ml-3">
+                                                        <i class="fa-solid fa-pen-to-square"
+                                                            style="color: #ffffff;"></i>
+                                                    </button>
+                                                    <div class="switch-container">
+                                                        <input type="checkbox" id="switch4" class="custom-switch">
+                                                        <label for="switch4"></label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Segunda clave</td>
+                                                <td>xxxx-xxxx-xxxx</td>
+                                                <td class="is-flex">
+                                                    <button>
+                                                        <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
+                                                    </button>
+                                                    <button class="ml-3">
+                                                        <i class="fa-solid fa-pen-to-square"
+                                                            style="color: #ffffff;"></i>
+                                                    </button>
+                                                    <div class="switch-container">
+                                                        <input type="checkbox" id="switch5" class="custom-switch">
+                                                        <label for="switch5"></label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tercera clave clave</td>
+                                                <td>xxxx-xxxx-xxxx</td>
+                                                <td class="is-flex">
+                                                    <button>
+                                                        <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
+                                                    </button>
+                                                    <button class="ml-3">
+                                                        <i class="fa-solid fa-pen-to-square"
+                                                            style="color: #ffffff;"></i>
+                                                    </button>
+                                                    <div class="switch-container">
+                                                        <input type="checkbox" id="switch6" class="custom-switch">
+                                                        <label for="switch6"></label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </section>
+                                <footer class="modal-card-foot">
+                                    <button class="button is-success">Aceptar</button>
+                                    <button class="button close-modal">Cancelar</button>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-2">
+                    <div class="is-flex is-align-items-center">
+                        <i class="fa-solid fa-shield-halved" style="color: #e6e6e6;"></i>
+                        <h2 class="has-text-grey-lighter">Permisos y usuarios</h2>
+                    </div>
+                    <div class="is-flex is-flex-direction-column ml-2 p-2" style="align-items: flex-start;">
+                        <button class="custom-button has-text-grey-l open-modal is-responsive load-view" data-view="roles"> > Roles y permisos</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </div>
+</section>

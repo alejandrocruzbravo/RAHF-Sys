@@ -1,0 +1,55 @@
+.custom-column {
+    height: 86vh;
+
+}
+.custom-row{
+    width: 50%;
+}
+
+.custom-cards {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #16161E;
+}
+.custom-shadow-cards-danger{
+    box-shadow: 0px 1px 10px hsl(348, 100%, 61%)
+}
+.custom-shadow-cards-link{
+    box-shadow: 0px 1px 10px hsl(217, 71%, 53%);
+}
+.custom-shadow-cards-success{
+    box-shadow: 0px 1px 10px hsl(141, 71%, 48%);
+}
+.custom-link {
+    color: hsl(0, 0%, 29%);
+    text-decoration: underline;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.custom-table{
+    height: auto;
+    width: auto;
+    background-color: #16161E;
+}
+.custom-border{
+    border-radius: 10px;
+    border: 1px solid hsl(0, 0%, 59%);
+}
+
+.custom-Input-Text{
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: vertical;
+    background-color: #16161E;
+    color: white;
+}
+.custom-button{
+    padding: 12px;
+    background-color: #1d1f2d;
+}

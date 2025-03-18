@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/bulma/bulma.min.css">
+    <link rel="stylesheet" href="/styles/dashboard.styles.css">
+    <link rel="stylesheet" href="/styles/dsh-components.styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <script src="/scripts/dshModules.scripts.js"></script>
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <main class="is-flex">
+        <!-- Navbar superior -->
+        <nav class="navbar is-dark custom-navbar">
+            <div class="navbar-brand">
+                <a class="navbar-item has-text-white menu-toggle" onclick="toggleSidebar()">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <span class="navbar-item has-text-white">
+                    <img src="/icons/favicon.png" alt="">
+                    RAFH
+                </span>
+            </div>
+            <div class="navbar-end navbar-content navbar-item">
+                <form action="" method="post" class="mr-3">
+                    <input class="input is-small " type="text" placeholder="Buscar" />
+                </form>
+                <a class="navbar-item" href=""><img src="/icons/notificaciones.png" alt="Notificaciones"></a>
+                <a class="navbar-item" href=""><img src="/icons/config.png" alt="Configuración"></a>
+            </div>
+        </nav>
+
+        <!-- Sidebar -->
+        <aside id="sidebar" class="custom-aside-bar">
+            <div class="menu">
+
+                <!-- Menú principal -->
+                <p class="menu-label has-text-white mt-3">Menú</p>
+                <ul class="menu-list">
+                    <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard">
+                        <img class="image is-16x16 mx-2"src="/icons/overview.png" alt="">
+                        Vista general
+                    </a>
+                    <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard?content=workcenter">
+                        <img class="image is-16x16 mx-2"src="/icons/edificio.png" alt="">
+                        Centro de trabajo
+                    </a>
+                    <a class="has-text-white is-flex is-align-items-center px-2">
+                        <img class="image is-16x16 mx-2"src="/icons/gestor.png" alt="">
+                        Gestores
+                    </a>
+                    <a class="has-text-white is-flex is-align-items-center px-2">
+                        <img class="image is-16x16 mx-2"src="/icons/usuarios.png" alt="">
+                        Resguardantes
+                    </a>
+                    <a class="has-text-white is-flex is-align-items-center px-2">
+                        <img class="image is-16x16 mx-2"src="/icons/bienes.png" alt="">
+                        Bienes materiales
+                    </a>
+                    <a class="has-text-white is-flex is-align-items-center px-2">
+                        <img class="image is-16x16 mx-2"src="/icons/zona.png" alt="">
+                        Áreas
+                    </a>
+                    <a class="has-text-white is-flex is-align-items-center px-2" >
+                        <img class="image is-16x16 mx-2"src="/icons/auditoria.png" alt="">
+                        Historial de auditorias
+                    </a>
+                    <a class="has-text-white is-flex is-align-items-center px-2">
+                        <img class="image is-16x16 mx-2"src="/icons/herramienta.png" alt="">
+                        Mantenimiento
+                    </a>
+                    <a class="has-text-white is-flex is-align-items-center px-2">
+                        <img class="image is-16x16 mx-2"src="/icons/documento.png" alt="">
+                        Reportes
+                    </a>
+                    <a class="has-text-white is-flex is-align-items-center px-2">
+                        <img class="image is-16x16 mx-2"src="/icons/campana.png" alt="">
+                        Solicitudes
+                    </a>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <div class="custom-main-content">
+            <section class="custom-main-section" id="dynamic-content">
+                <%- include('components/dsh-components/' + content) %>
+            </section>
+        </div>
+        
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("is-active");
+        }
+        function toggleSidebar() {
+            let sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("is-active");
+        }
+        function toggleSubmenu(id) {
+        let submenus = document.querySelectorAll('.submenu');
+        submenus.forEach(submenu => {
+            if (submenu.id !== id) {
+                submenu.style.display = "none"; // Cerrar todos los submenús
+            }
+        });
+
+        let submenu = document.getElementById(id);
+        submenu.style.display = submenu.style.display === "block" ? "none" : "block"; // Alternar el submenú seleccionado
+    }
+    </script>
+
+</body>
+</html>
