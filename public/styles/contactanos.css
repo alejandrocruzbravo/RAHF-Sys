@@ -1,0 +1,137 @@
+/* Estilos del Header */
+@font-face {
+    font-family: 'Audiowide';
+    src: url('/fonts/Audiowide.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.custom-section-first {
+    background-color: rgb(20, 22, 26);
+    background-image: url('/images/bg-waves.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-family-text {
+    font-family: 'Audiowide', sans-serif;
+}
+
+.custom-subtitle {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #6c757d;
+}
+
+/* Estilos del formulario */
+.section {
+    background-color: rgb(20, 22, 26);
+    color: white;
+    padding: 3rem 1.5rem;
+}
+
+.title {
+    color: white !important;
+    font-family: 'Audiowide', sans-serif;
+}
+
+.is-size-4 {
+    color: #6c757d;
+}
+
+/* Estilos de los iconos sociales */
+.social-media {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-media img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover img {
+    transform: translateY(-5px);
+}
+
+/* Estilos del formulario */
+.box {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+}
+
+.label {
+    color: white;
+}
+
+.input, .textarea {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.input::placeholder, .textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.input:focus, .textarea:focus {
+    border-color: #4a4af4;
+    box-shadow: 0 0 0 0.125em rgba(74, 74, 244, 0.25);
+}
+
+.button.is-link {
+    background-color: #4a4af4;
+    transition: background-color 0.3s ease;
+}
+
+.button.is-link:hover {
+    background-color: #3939d8;
+}
+
+/* Footer */
+.footer {
+    background-color: rgb(20, 22, 26);
+    color: white;
+    padding: 3rem 1.5rem;
+}
+
+.footer strong {
+    color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .custom-family-text {
+        font-size: 2.5rem !important;
+    }
+    
+    .custom-subtitle {
+        font-size: 1.2rem !important;
+    }
+}
+
+.custom-button-primary{
+    background-color: rgb(0, 60, 204);
+}
