@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/bulma/bulma.min.css">
+    <link rel="stylesheet" href="/styles/login&Register.styles.css">
+    <title>RAFH - Registro</title>
+</head>
+
+<body class="has-navbar-fixed-top">
+    <%- include('components/navbar') %>
+        <section class="custom-section-first">
+            <div class="main-container">
+                <div class="signup-container">
+                    <div class="form-side">
+                        <h1 class="title custom-family-text">Registro</h1>
+                        <form method="POST" class="register-form" id="register-form">
+                            <div class="field">
+                                <div class="control has-icons-left">
+                                    <input class="input" type="text" name="nombre" placeholder="Tu Nombre" required>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control has-icons-left">
+                                    <input class="input" type="email" name="email" placeholder="Tu Email" required>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control has-icons-left">
+                                    <input class="input" type="password" name="contraseña" placeholder="Contraseña"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control has-icons-left">
+                                    <input class="input" type="password" name="repetir_contraseña"
+                                        placeholder="Repite tu contraseña" required>
+                                </div>
+                            </div>
+
+                            <div class="field terms">
+                                <label class="checkbox">
+                                    <input type="checkbox" required>
+                                    Acepto todos los <a href="#" class="terms-link">términos de servicio</a>
+                                </label>
+                            </div>
+
+                            <div class="field">
+                                <button type="submit" class="button register-button">Registrarse</button>
+                            </div>
+
+                            <div class="field login-link">
+                                <a href="/login">Ya tengo una cuenta</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="image-side">
+                        <img src="/images/form.png" alt="Imagen de registro">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- include('components/footer') %>
+            <script src="/scripts/home.scripts.js"></script>
+</body>
+
+</html>

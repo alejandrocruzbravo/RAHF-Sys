@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/bulma/bulma.min.css">
+    <link rel="stylesheet" href="/styles/login&Register.styles.css">
+    <title>RAFH - Login</title>
+</head>
+
+<body class="has-navbar-fixed-top">
+    <%- include('components/navbar') %>
+        <section class="custom-section-first">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-4">
+                        <div class="box">
+                            <h1 class="title has-text-centered custom-family-text">Iniciar Sesión</h1>
+
+                            <div class="field">
+                                <div class="control has-icons-left">
+                                    <input class="input" type="text" name="username" placeholder="Ingresa tu usuario"
+                                        required>
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control has-icons-left">
+                                    <input class="input" type="password" name="password"
+                                        placeholder="Ingresa tu contraseña" required>
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <p class="control has-text-right">
+                                    <a href="#" class="is-size-7 has-text-link">¿Olvidaste tu contraseña?</a>
+                                </p>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <button type="submit" class="button register-button is-fullwidth">
+                                        Iniciar Sesión
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="has-text-centered mt-4">
+                                <p class="is-size-7">¿No tienes una cuenta?
+                                    <a href="/reg" class="has-text-link">Registrarse</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <%- include('components/footer') %>
+            <script src="/scripts/home.scripts.js"></script>
+</body>
+
+</html>

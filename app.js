@@ -40,6 +40,14 @@ app.get('/dashboard/:component', (req, res) => {
     res.render(`components/dsh-components/${component}`);
 });
 
+app.get('/login', (req, res) => {
+    res.render('login');
+});
+
+app.get('/reg', (req, res) => {
+    res.render('register');
+});
+
 
 // Iniciar el servidor
 app.listen(port, () => {
