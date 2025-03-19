@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/bulma/bulma.min.css">
+    <link rel="stylesheet" href="/styles/centroT.styles.css">
+    <title>RAFH - Centros de Trabajo</title>
+</head>
+<body class="has-navbar-fixed-top">
+    <%- include('components/navbar') %>
+
+    <!-- Banner de bienvenida -->
+    <section class="hero is-primary custom-hero">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title has-text-white">¡Bienvenido a tus Centros de Trabajo!</h1>
+                <p class="subtitle has-text-white">Gestiona y accede a todos tus espacios laborales</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid de centros de trabajo -->
+    <section class="section">
+        <div class="container">
+            <div class="columns is-multiline">
+                <!-- Centro de trabajo 1 -->
+                <div class="column is-3">
+                    <a href="/dashboard">
+                        <div class="card custom-card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="/images/tec.jpg">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p class="title is-4 has-text-white">Tecnologico de Chetumal</p>
+                                <p class="subtitle is-6 has-text-white">Sede central de operaciones</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Centro de trabajo 2 -->
+                <div class="column is-3">
+                    <div class="card custom-card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="/images/scotiabank.png" alt="Scotiabank">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-4 has-text-white">Scotiabank</p>
+                            <p class="subtitle is-6 has-text-white">Sucursal Bancaria Principal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Centro de trabajo 3 -->
+                <div class="column is-3">
+                    <div class="card custom-card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="/images/starbucks.jpg" alt="Starbucks">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-4 has-text-white">Starbucks</p>
+                            <p class="subtitle is-6 has-text-white">Cafetería Plaza Las Américas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Centro de trabajo 4 -->
+                <div class="column is-3">
+                    <div class="card custom-card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="/images/chedraui.jpg" alt="Chedraui">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-4 has-text-white">Chedraui</p>
+                            <p class="subtitle is-6 has-text-white">Supermercado Zona Centro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('components/footer') %>
+    <script src="/scripts/home.scripts.js"></script>
+</body>
+</html>
