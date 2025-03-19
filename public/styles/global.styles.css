@@ -1,7 +1,3 @@
-body{
-    background-color: whitesmoke;
-}
-
 @font-face {
     font-family: 'Audiowide'; /* Nombre que usarás para la fuente */
     src: url('/fonts/Audiowide.ttf') format('truetype');

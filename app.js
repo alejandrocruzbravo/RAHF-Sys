@@ -48,6 +48,10 @@ app.get('/reg', (req, res) => {
     res.render('register');
 });
 
+app.get('/cen', (req, res) => {
+    res.render('centroT');
+});
+
 
 // Iniciar el servidor
 app.listen(port, () => {
