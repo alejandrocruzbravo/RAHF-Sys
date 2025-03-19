@@ -1,0 +1,563 @@
+<style>
+    /* Eliminar la barra de desplazamiento horizontal */
+    .table-container {
+        overflow-x: hidden !important;
+        width: 100%;
+    }
+
+    .custom-table {
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    /* Ajustar el ancho de las columnas */
+    .custom-table th,
+    .custom-table td {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Anchos específicos para cada columna */
+    .custom-table th:nth-child(1),
+    .custom-table td:nth-child(1) {
+        width: 15%;
+    }
+
+    /* Nombre */
+
+    .custom-table th:nth-child(2),
+    .custom-table td:nth-child(2) {
+        width: 15%;
+    }
+
+    /* Apellidos */
+
+    .custom-table th:nth-child(3),
+    .custom-table td:nth-child(3) {
+        width: 17%;
+    }
+
+    /* Puesto/Cargo */
+
+    .custom-table th:nth-child(4),
+    .custom-table td:nth-child(4) {
+        width: 17%;
+    }
+
+    /* Área */
+
+    .custom-table th:nth-child(5),
+    .custom-table td:nth-child(5) {
+        width: 17%;
+    }
+
+    /* Departamento */
+
+    .custom-table th:nth-child(6),
+    .custom-table td:nth-child(6) {
+        width: 17%;
+    }
+
+    /* Correo */
+
+    .custom-table th:nth-child(7),
+    .custom-table td:nth-child(7) {
+        width: 17%;
+    }
+
+    /* Teléfono */
+
+    .custom-table th:nth-child(8),
+    .custom-table td:nth-child(8) {
+        width: 17%;
+    }
+
+    /* Rol */
+
+    .custom-table th:nth-child(9),
+    .custom-table td:nth-child(9) {
+        width: 20%;
+        padding: 0.5em !important;
+    }
+
+    /* Acciones */
+    /* Arreglar el problema de la línea gris en los botones */
+    .actions-column {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 0.19rem !important;
+        border-bottom: 1px solid #363636 !important;
+    }
+
+    /* Estilo para los botones en la columna de acciones */
+    .actions-column .button {
+        height: 2rem !important;
+        width: 2rem !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+
+    /* Asegurar que la tabla ocupe todo el ancho disponible */
+    .table.is-fullwidth {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .container {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+</style>
+
+<section class="container">
+    <div class="is-flex">
+        <label for="" class="is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-6-fullhd">Gestor</label>
+        <label for="" class="is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-6-fullhd ml-auto">Instituto
+            Tecnologico de chetumal</label>
+    </div>
+
+    <div class="container is-flex mt-3 p-2">
+        <div>
+            <form action="" class="is-flex">
+                <input type="text" name="" id="" placeholder="Buscar gestor" class="input has-background-black-bis">
+                <input type="submit" value="Buscar" class="button has-background-black-bis">
+            </form>
+        </div>
+        <div class="ml-auto">
+            <button class="button is-primary open-modal" data-target="modal-rsg-new">Nuevo Gestor</button>
+        </div>
+        <div class="modal" id="modal-rsg-new">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Nuevo Gestor</p>
+                    <button class="delete close-modal" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <form action="">
+                        <div class="field">
+                            <label class="label">Nombre</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Nombre">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Apellidos</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Apellido">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Puesto/Cargo</label>
+                            <div class="control">
+                                <div class="select">
+                                    <select>
+                                        <option>Selecione puesto/cargo</option>
+                                        <option>Opcion 1</option>
+                                        <option>Opcion 2</option>
+                                        <option>Opcion 3</option>
+                                        <option>Opcion 4</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Área</label>
+                            <div class="control">
+                                <div class="select">
+                                    <select>
+                                        <option>Seleccionar Área</option>
+                                        <option>RR.HH</option>
+                                        <option>Sistemas</option>
+                                        <option>Administración</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Departamento</label>
+                            <div class="control">
+                                <div class="select">
+                                    <select>
+                                        <option>Seleccionar Departamento</option>
+                                        <option>RR.HH</option>
+                                        <option>Sistemas</option>
+                                        <option>Administración</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Correo</label>
+                            <div class="control">
+                                <input class="input" type="email" placeholder="Correo">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Número Teléfono</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Número">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Rol</label>
+                            <div class="control">
+                                <div class="select">
+                                    <select>
+                                        <option>Seleccionar rol</option>
+                                        <option>Administrador</option>
+                                        <option>Gestor</option>
+                                        <option>Jefe de departamento</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button is-primary">Continuar</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Editar -->
+    <div class="modal" id="modal-edit">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Editar Gestor</p>
+                <button class="delete close-modal" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <form action="">
+                    <div class="field">
+                        <label class="label">Nombre</label>
+                        <div class="control">
+                            <input class="input" type="text" id="edit-nombre" placeholder="Nombre">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Apellidos</label>
+                        <div class="control">
+                            <input class="input" type="text" id="edit-apellidos" placeholder="Apellido">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Puesto/Cargo</label>
+                        <div class="control">
+                            <div class="select">
+                                <select id="edit-puesto">
+                                    <option>Selecione puesto/cargo</option>
+                                    <option>Director de TI</option>
+                                    <option>Coordinador RH</option>
+                                    <option>Jefe de Personal</option>
+                                    <option>Analista de Sistemas</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Área</label>
+                        <div class="control">
+                            <div class="select">
+                                <select id="edit-area">
+                                    <option>Seleccionar Área</option>
+                                    <option>RR.HH</option>
+                                    <option>Sistemas</option>
+                                    <option>Administración</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Departamento</label>
+                        <div class="control">
+                            <div class="select">
+                                <select id="edit-departamento">
+                                    <option>Seleccionar Departamento</option>
+                                    <option>RR.HH</option>
+                                    <option>Sistemas</option>
+                                    <option>Administración</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Correo</label>
+                        <div class="control">
+                            <input class="input" type="email" id="edit-correo" placeholder="Correo">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Número Teléfono</label>
+                        <div class="control">
+                            <input class="input" type="text" id="edit-telefono" placeholder="Número">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Rol</label>
+                        <div class="control">
+                            <div class="select">
+                                <select id="edit-rol">
+                                    <option>Seleccionar rol</option>
+                                    <option>Administrador</option>
+                                    <option>Gestor</option>
+                                    <option>Jefe de departamento</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-primary">Guardar Cambios</button>
+                <button class="button close-modal">Cancelar</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal de Eliminar -->
+    <div class="modal" id="modal-delete">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Confirmar Eliminación</p>
+                <button class="delete close-modal" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <p>¿Estás seguro que deseas eliminar este gestor? Esta acción no se puede deshacer.</p>
+                <div class="mt-4">
+                    <p><strong>Nombre: </strong><span id="delete-nombre"></span></p>
+                    <p><strong>Cargo: </strong><span id="delete-cargo"></span></p>
+                    <p><strong>Departamento: </strong><span id="delete-departamento"></span></p>
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-danger">Eliminar</button>
+                <button class="button close-modal">Cancelar</button>
+            </footer>
+        </div>
+    </div>
+
+    <div class="mt-3 p-2">
+        <div class="table-container">
+            <table class="table is-fullwidth custom-table">
+                <thead>
+                    <tr>
+                        <th class="has-text-grey-lighter">Nombre</th>
+                        <th class="has-text-grey-lighter">Apellidos</th>
+                        <th class="has-text-grey-lighter">Puesto/Cargo</th>
+                        <th class="has-text-grey-lighter">Área</th>
+                        <th class="has-text-grey-lighter">Departamento</th>
+                        <th class="has-text-grey-lighter">Correo</th>
+                        <th class="has-text-grey-lighter">Número Teléfono</th>
+                        <th class="has-text-grey-lighter">Rol</th>
+                        <th class="has-text-grey-lighter">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="has-text-grey">Juan</td>
+                        <td class="has-text-grey">Pérez</td>
+                        <td class="has-text-grey">Director de TI</td>
+                        <td class="has-text-grey">Tecnologías</td>
+                        <td class="has-text-grey">Sistemas</td>
+                        <td class="has-text-grey">juan.perez@example.com</td>
+                        <td class="has-text-grey">983-123-4567</td>
+                        <td class="has-text-grey">Administrador</td>
+                        <td>
+                            <button class="button open-modal" data-target="modal-edit">
+                                <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+                            </button>
+                            <button class="button open-modal" data-target="modal-delete">
+                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="has-text-grey">María</td>
+                        <td class="has-text-grey">García</td>
+                        <td class="has-text-grey">Coordinadora RH</td>
+                        <td class="has-text-grey">Recursos Humanos</td>
+                        <td class="has-text-grey">RR.HH</td>
+                        <td class="has-text-grey">maria.garcia@example.com</td>
+                        <td class="has-text-grey">983-234-5678</td>
+                        <td class="has-text-grey">Gestor</td>
+                        <td>
+                            <button class="button open-modal" data-target="modal-edit">
+                                <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+                            </button>
+                            <button class="button open-modal" data-target="modal-delete">
+                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="has-text-grey">Carlos</td>
+                        <td class="has-text-grey">Hernández</td>
+                        <td class="has-text-grey">Jefe de Personal</td>
+                        <td class="has-text-grey">Administración</td>
+                        <td class="has-text-grey">RR.HH</td>
+                        <td class="has-text-grey">carlos.hernandez@example.com</td>
+                        <td class="has-text-grey">983-345-6789</td>
+                        <td class="has-text-grey">Jefe de departamento</td>
+                        <td>
+                            <button class="button open-modal" data-target="modal-edit">
+                                <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+                            </button>
+                            <button class="button open-modal" data-target="modal-delete">
+                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="has-text-grey">Ana</td>
+                        <td class="has-text-grey">González</td>
+                        <td class="has-text-grey">Analista de Sistemas</td>
+                        <td class="has-text-grey">Tecnologías</td>
+                        <td class="has-text-grey">Sistemas</td>
+                        <td class="has-text-grey">ana.gonzalez@example.com</td>
+                        <td class="has-text-grey">983-456-7890</td>
+                        <td class="has-text-grey">Gestor</td>
+                        <td>
+                            <button class="button open-modal" data-target="modal-edit">
+                                <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+                            </button>
+                            <button class="button open-modal" data-target="modal-delete">
+                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="has-text-grey">Pedro</td>
+                        <td class="has-text-grey">Martínez</td>
+                        <td class="has-text-grey">Coordinador Administrativo</td>
+                        <td class="has-text-grey">Finanzas</td>
+                        <td class="has-text-grey">Administración</td>
+                        <td class="has-text-grey">pedro.martinez@example.com</td>
+                        <td class="has-text-grey">983-567-8901</td>
+                        <td class="has-text-grey">Gestor</td>
+                        <td>
+                            <button class="button open-modal" data-target="modal-edit">
+                                <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+                            </button>
+                            <button class="button open-modal" data-target="modal-delete">
+                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="has-text-grey">Laura</td>
+                        <td class="has-text-grey">Sánchez</td>
+                        <td class="has-text-grey">Jefa de Sistemas</td>
+                        <td class="has-text-grey">Tecnologías</td>
+                        <td class="has-text-grey">Sistemas</td>
+                        <td class="has-text-grey">laura.sanchez@example.com</td>
+                        <td class="has-text-grey">983-678-9012</td>
+                        <td class="has-text-grey">Jefe de departamento</td>
+                        <td>
+                            <button class="button open-modal" data-target="modal-edit">
+                                <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+                            </button>
+                            <button class="button open-modal" data-target="modal-delete">
+                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="has-text-grey">Roberto</td>
+                        <td class="has-text-grey">López</td>
+                        <td class="has-text-grey">Administrador de Red</td>
+                        <td class="has-text-grey">Tecnologías</td>
+                        <td class="has-text-grey">Sistemas</td>
+                        <td class="has-text-grey">roberto.lopez@example.com</td>
+                        <td class="has-text-grey">983-789-0123</td>
+                        <td class="has-text-grey">Gestor</td>
+                        <td>
+                            <button class="button open-modal" data-target="modal-edit">
+                                <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+                            </button>
+                            <button class="button open-modal" data-target="modal-delete">
+                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+            <a href="#" class="pagination-previous">Previous</a>
+            <a href="#" class="pagination-next">Next page</a>
+            <ul class="pagination-list">
+                <li><a href="#" class="pagination-link" aria-label="Goto page 1">1</a></li>
+                <li><span class="pagination-ellipsis">&hellip;</span></li>
+                <li><a href="#" class="pagination-link" aria-label="Goto page 45">45</a></li>
+                <li>
+                    <a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a>
+                </li>
+                <li><a href="#" class="pagination-link" aria-label="Goto page 47">47</a></li>
+                <li><span class="pagination-ellipsis">&hellip;</span></li>
+                <li><a href="#" class="pagination-link" aria-label="Goto page 86">86</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Funcionalidad para abrir modales
+        const openModalButtons = document.querySelectorAll('.open-modal');
+        const closeModalButtons = document.querySelectorAll('.close-modal');
+        const modalBackgrounds = document.querySelectorAll('.modal-background');
+
+        openModalButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const target = button.dataset.target;
+                const modal = document.getElementById(target);
+                modal.classList.add('is-active');
+
+                // Si es el modal de editar, llenar con los datos de la fila
+                if (target === 'modal-edit') {
+                    const row = button.closest('tr');
+                    document.getElementById('edit-nombre').value = row.cells[0].textContent;
+                    document.getElementById('edit-apellidos').value = row.cells[1].textContent;
+                    document.getElementById('edit-correo').value = row.cells[5].textContent;
+                    document.getElementById('edit-telefono').value = row.cells[6].textContent;
+                    // ... llenar los demás campos
+                }
+
+                // Si es el modal de eliminar, mostrar los datos relevantes
+                if (target === 'modal-delete') {
+                    const row = button.closest('tr');
+                    document.getElementById('delete-nombre').textContent =
+                        row.cells[0].textContent + ' ' + row.cells[1].textContent;
+                    document.getElementById('delete-cargo').textContent = row.cells[2].textContent;
+                    document.getElementById('delete-departamento').textContent = row.cells[4].textContent;
+                }
+            });
+        });
+
+        // Cerrar modales
+        const closeModals = () => {
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.classList.remove('is-active');
+            });
+        };
+
+        closeModalButtons.forEach(button => {
+            button.addEventListener('click', closeModals);
+        });
+
+        modalBackgrounds.forEach(background => {
+            background.addEventListener('click', closeModals);
+        });
+    });
+</script>
