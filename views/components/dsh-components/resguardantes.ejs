@@ -1,0 +1,237 @@
+<section class="container">
+    <div class="is-flex">
+        <label for="" class="is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-6-fullhd">Resguardantes</label>
+        <label for="" class="is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-6-fullhd ml-auto">Instituto
+            Tecnologico de chetumal</label>
+    </div>
+    <div class="container is-flex mt-3 p-2">
+        <div>
+            <form action="" class="is-flex">
+                <input type="text" name="" id="" placeholder="Buscar usuario" class="input has-background-black-bis">
+                <input type="submit" value="Buscar" class="button has-background-black-bis">
+            </form>
+        </div>
+        <div class="ml-auto">
+            <button class="button is-primary open-modal" data-target="modal-rsg-new">Nuevo Resguardante</button>
+        </div>
+        <div class="modal" id="modal-rsg-new">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Nuevo resguardante</p>
+                    <button class="delete close-modal" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <form action="">
+                        <div class="field">
+                            <label class="label">Nombre</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Nombre">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Apellidos</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Apellido">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Correo</label>
+                            <div class="control">
+                                <input class="input" type="email" placeholder="Correo">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Rol</label>
+                            <div class="control">
+                                <div class="select">
+                                    <select>
+                                        <option>Seleccionar rol</option>
+                                        <option>Administrador</option>
+                                        <option>Gestor</option>
+                                        <option>Jefe de departamento</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Área</label>
+                            <div class="control">
+                                <div class="select">
+                                    <select>
+                                        <option>Seleccionar Área</option>
+                                        <option>RR.HH</option>
+                                        <option>Sistemas</option>
+                                        <option>Administración</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button is-primary">Continuar</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <div class="mt-3 p-2">
+        <div class="table-container">
+            <table class="table is-fullwidth custom-table">
+                <thead>
+                    <tr>
+                        <th class="has-text-grey-lighter">Nombre</th>
+                        <th class="has-text-grey-lighter">Apellidos</th>
+                        <th class="has-text-grey-lighter">Correo</th>
+                        <th class="has-text-grey-lighter">Rol</th>
+                        <th class="has-text-grey-lighter">Área</th>
+                        <th class="has-text-grey-lighter">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <a href="">
+                            <td class="has-text-grey">Juan</td>
+                            <td class="has-text-grey">Pérez</td>
+                            <td class="has-text-grey">juan.perez@example.com</td>
+                            <td class="has-text-grey">Jefe de departamento</td>
+                            <td class="has-text-grey">Sistemas</td>
+                            <td class="is-flex">
+                                <a class="button" href="/dashboard?content=user-resg">
+                                    <i class="fa-solid fa-eye" style="color: #ffffff;"></i>
+                                </a>
+                                <button class="button">
+                                    <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                                </button>
+                            </td>
+                            </td>
+                        </a>
+
+                    </tr>
+                    <tr>
+                        <td class="has-text-grey">María</td>
+                        <td class="has-text-grey">García</td>
+                        <td class="has-text-grey">maria.garcia@example.com</td>
+                        <td class="has-text-grey">Resguardante</td>
+                        <td class="has-text-grey">Sistemas</td>
+                        <td class="is-flex is-align-items-center">
+                            <button class="button">
+                                <i class="fa-solid fa-eye" style="color: #ffffff;"></i>
+                            </button>
+                            <button class="button">
+                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Continuar con más usuarios -->
+                    <tr>
+                        <td class="has-text-grey">Carlos</td>
+                        <td class="has-text-grey">Hernández</td>
+                        <td class="has-text-grey">carlos.hernandez@example.com</td>
+                        <td class="has-text-grey">Jefe de departamento</td>
+                        <td class="has-text-grey">RR.HH</td>
+                        <td class="is-flex is-align-items-center">
+                            <button class="button">
+                                <i class="fa-solid fa-eye" style="color: #ffffff;"></i>
+                            </button>
+                            <button class="button">
+                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="has-text-grey">Ana</td>
+                        <td class="has-text-grey">González</td>
+                        <td class="has-text-grey">ana.gonzalez@example.com</td>
+                        <td class="has-text-grey">Resguardante</td>
+                        <td class="has-text-grey">RR.HH</td>
+                        <td class="is-flex is-align-items-center">
+                            <button class="button">
+                                <i class="fa-solid fa-eye" style="color: #ffffff;"></i>
+                            </button>
+                            <button class="button">
+                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="has-text-grey">Pedro</td>
+                        <td class="has-text-grey">Martínez</td>
+                        <td class="has-text-grey">pedro.martinez@example.com</td>
+                        <td class="has-text-grey">Resguardante</td>
+                        <td class="has-text-grey">Administración</td>
+                        <td class="is-flex is-align-items-center">
+                            <button class="button">
+                                <i class="fa-solid fa-eye" style="color: #ffffff;"></i>
+                            </button>
+                            <button class="button">
+                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="has-text-grey">Juan</td>
+                        <td class="has-text-grey">Pérez</td>
+                        <td class="has-text-grey">juan.perez@example.com</td>
+                        <td class="has-text-grey">Resguardante</td>
+                        <td class="has-text-grey">RR.HH</td>
+                        <td class="is-flex is-align-items-center">
+                            <button class="button">
+                                <i class="fa-solid fa-eye" style="color: #ffffff;"></i>
+                            </button>
+                            <button class="button">
+                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="has-text-grey">María</td>
+                        <td class="has-text-grey">López</td>
+                        <td class="has-text-grey">maria.lopez@example.com</td>
+                        <td class="has-text-grey">Jefe de departamento</td>
+                        <td class="has-text-grey">Administración</td>
+                        <td class="is-flex is-align-items-center">
+                            <button class="button">
+                                <i class="fa-solid fa-eye" style="color: #ffffff;"></i>
+                            </button>
+                            <button class="button">
+                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="has-text-grey">Pedro</td>
+                        <td class="has-text-grey">Ramírez</td>
+                        <td class="has-text-grey">pedro.ramirez@example.com</td>
+                        <td class="has-text-grey">Resguardante</td>
+                        <td class="has-text-grey">RR.HH</td>
+                        <td class="is-flex is-align-items-center">
+                            <button class="button">
+                                <i class="fa-solid fa-eye" style="color: #ffffff;"></i>
+                            </button>
+                            <button class="button">
+                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+            <a href="#" class="pagination-previous">Previous</a>
+            <a href="#" class="pagination-next">Next page</a>
+            <ul class="pagination-list">
+                <li><a href="#" class="pagination-link" aria-label="Goto page 1">1</a></li>
+                <li><span class="pagination-ellipsis">&hellip;</span></li>
+                <li><a href="#" class="pagination-link" aria-label="Goto page 45">45</a></li>
+                <li>
+                    <a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a>
+                </li>
+                <li><a href="#" class="pagination-link" aria-label="Goto page 47">47</a></li>
+                <li><span class="pagination-ellipsis">&hellip;</span></li>
+                <li><a href="#" class="pagination-link" aria-label="Goto page 86">86</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
