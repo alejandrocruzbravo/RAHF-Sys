@@ -20,7 +20,7 @@
             <div class="column custom-cards custom-shadow-cards-link m-1 custom-cards p-2">
                 <div class="is-flex is-align-items-center">
                     <h2 class="has-text-grey">Bienes registrados</h2>
-                    <a class="ml-auto" href="">
+                    <a class="ml-auto" href="/dashboard?content=bienes">
                         <img class="image is-16x16" src="/icons/consulta.png" alt="">
                     </a>
                 </div>
@@ -31,7 +31,7 @@
             <div class="column m-1 custom-cards custom-shadow-cards-link p-2">
                 <div class="is-flex is-align-items-center">
                     <h2 class="has-text-grey">Gestores asignados</h2>
-                    <a class="ml-auto" href="">
+                    <a class="ml-auto" href="/dashboard?content=gestores">
                         <img class="image is-16x16" src="/icons/consulta.png" alt="">
                     </a>
                 </div>
@@ -42,14 +42,14 @@
             <div class="column m-1 custom-cards custom-shadow-cards-link p-2">
                 <div class="is-flex is-align-items-center">
                     <h2 class="has-text-grey">Resguardantes registrados</h2>
-                    <a class="ml-auto" href="">
+                    <a class="ml-auto" href="/dashboard?content=resguardantes">
                         <img class="image is-16x16 has-text-grey-lighter" src="/icons/consulta.png" alt="">
                     </a>
                 </div>
                 <h2 class="is-size-3">532</h2>
             </div>
         </div>
-        <section class="section">
+        <section class="">
             <div class="container custom-border">
                 <div class="p-1">
                     <div class="is-flex is-align-items-center">
@@ -71,8 +71,8 @@
                                         <input class="input custom-input" type="text" placeholder="Nueva Categoria" />
                                         <input class="button " type="submit" value="Añadir">
                                         <div class="switch-container">
-                                            <input type="checkbox" id="switch1" class="custom-switch">
-                                            <label for="switch1"></label>
+                                            <input type="checkbox" id="switch0" class="custom-switch">
+                                            <label for="switch0"></label>
                                         </div>
                                     </form>
                                     <div class="custom-border mt-2 p-2">
@@ -127,26 +127,36 @@
                             </div>
                         </div>
                         <button class="custom-button has-text-grey open-modal is-responsive" data-target="modal2"> >
-                            Políticas de transferencias</button>
+                            Información de los bienes</button>
                         <div class="modal" id="modal2">
                             <div class="modal-background"></div>
                             <div class="modal-card">
                                 <header class="modal-card-head">
-                                    <p class="modal-card-title">Políticas de transferencias</p>
+                                    <p class="modal-card-title">Información de los bienes</p>
                                     <button class="delete close-modal" aria-label="close"></button>
                                 </header>
                                 <section class="modal-card-body">
                                     <div>
                                         <form action="">
-                                            <label for="">Por autorización</label>
+                                            <label for="">Imagen del bien</label>
+                                            <div class="switch-container is-flex is-align-items-center">
+                                                <input type="checkbox" id="switch1" class="custom-switch">
+                                                <label for="switch1"></label>
+                                            </div>
+                                            <label for="">Marca del bien</label>
                                             <div class="switch-container is-flex is-align-items-center">
                                                 <input type="checkbox" id="switch2" class="custom-switch">
                                                 <label for="switch2"></label>
                                             </div>
-                                            <label for="">Por notificación</label>
+                                            <label for="">Modelo del bien</label>
                                             <div class="switch-container is-flex is-align-items-center">
                                                 <input type="checkbox" id="switch3" class="custom-switch">
                                                 <label for="switch3"></label>
+                                            </div>
+                                            <label for="">Folio del bien</label>
+                                            <div class="switch-container is-flex is-align-items-center">
+                                                <input type="checkbox" id="switch9" class="custom-switch">
+                                                <label for="switch9"></label>
                                             </div>
                                         </form>
                                     </div>
@@ -171,8 +181,6 @@
                                         <input class="input custom-input" type="text" placeholder="Nueva clave" />
                                         <input class="button " type="submit" value="Añadir">
                                     </form>
-
-
                                     <div class="custom-border mt-2 p-2">
                                         <table class="table is-fullwidth">
                                             <tr>
@@ -248,9 +256,53 @@
                         <h2 class="has-text-grey-lighter">Permisos y usuarios</h2>
                     </div>
                     <div class="is-flex is-flex-direction-column ml-2 p-2" style="align-items: flex-start;">
-                        <button class="custom-button has-text-grey open-modal is-responsive load-view" data-view="roles"> > Roles y permisos</button>
+                        <button class="custom-button has-text-grey open-modal is-responsive load-view"
+                            data-view="roles"> > Roles y permisos</button>
                     </div>
-                    
+                    <div class="is-flex is-flex-direction-column ml-2 p-2" style="align-items: flex-start;">
+                        <button class="custom-button has-text-grey open-modal is-responsive" data-target="modal4">
+                            > Políticas de transferencias</button>
+                        <div class="modal" id="modal4">
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title">Políticas de transferencias</p>
+                                    <button class="delete close-modal" aria-label="close"></button>
+                                </header>
+                                <section class="modal-card-body">
+                                    <div>
+                                        <form action="">
+                                            <label for="">Por autorización</label>
+                                            <div class="switch-container is-flex is-align-items-center">
+                                                <input type="checkbox" id="switch7" class="custom-switch">
+                                                <label for="switch7"></label>
+                                            </div>
+                                            <label for="">Por notificación</label>
+                                            <div class="switch-container is-flex is-align-items-center">
+                                                <input type="checkbox" id="switch8" class="custom-switch">
+                                                <label for="switch8"></label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </section>
+                                <footer class="modal-card-foot">
+                                    <button class="button is-success">Aceptar</button>
+                                    <button class="button close-modal">Cancelar</button>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="p-2">
+                    <div class="is-flex is-align-items-center">
+                        <i class="fa-solid fa-shield-halved" style="color: #e6e6e6;"></i>
+                        <h2 class="has-text-grey-lighter">Configuración de areas</h2>
+                    </div>
+                    <div class="is-flex is-flex-direction-column ml-2 p-2" style="align-items: flex-start;">
+                        <button class="custom-button has-text-grey open-modal is-responsive load-view"
+                            data-view="roles"> > Información de las áreas</button>
+                    </div>
                 </div>
             </div>
         </section>

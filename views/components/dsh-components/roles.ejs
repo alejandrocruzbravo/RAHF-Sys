@@ -2,59 +2,118 @@
     <div class="is-flex">
         <label for="" class="is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-6-fullhd">Centro de
             trabajo — Roles y permiso</label>
-        <label for="" class="is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-6-fullhd ml-auto">Instituto Tecnológico de Chetumal</label>
+        <label for="" class="is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-6-fullhd ml-auto">Instituto
+            Tecnológico de Chetumal</label>
+    </div>
+    <div class="mt-4">
+        <button class="button is-primary open-modal" data-target="modal-rol-new">Nuevo rol</button>
+    </div>
+    <div class="modal" id="modal-rol-new">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Nuevo Rol</p>
+                <button class="delete close-modal" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <form action="">
+                    <div class="field">
+                        <label class="label">Nombre del rol</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Nombre">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Tipo de usuario</label>
+                        <div class="control">
+                            <div class="select">
+                                <select>
+                                    <option>Selecione tipo de usuario</option>
+                                    <option>Gestor</option>
+                                    <option>Resguardante</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-primary">Continuar</button>
+            </footer>
+        </div>
     </div>
     <div class="container">
         <div class="columns mt-2">
             <!-- Columna Izquierda (8 de 12 columnas en pantallas grandes, 12 en móviles) -->
             <div class="column is-12-tablet is-4-desktop is-mobile">
-                <div class="p-3">
-                    <form action="" class="is-flex is-align-items-center ">
-                        <input class="custom-Input-Text is-fullwidth" type="text" placeholder="Nuevo rol" />
-                        <input class="button is-link" type="submit" value="Añadir">
-                    </form>
-                </div>
                 <div class="custom-cards p-1">
-                    <table class="table custom-table is-fullwidth ">
+                    <h1 class="p-2"><strong>Roles para gestores</strong></h1>
+                    <table class="table custom-table is-fullwidth mt-2 ">
                         <tr class="m-1">
                             <th class="has-text-grey-lighter">Rol</th>
                             <th class="has-text-grey-lighter">Acciones</th>
                         </tr>
                         <tr>
-                            <td class="has-text-grey">Administrador</td>
+                            <td class="has-text-grey">Gestor Administrador</td>
                             <td class="is-flex">
                                 <button class="button ml-3">
                                     <i class="fa-solid fa-trash" style="color: #777777;"></i>
                                 </button>
                                 <button class="button ml-3">
-                                    <i class="fa-solid fa-pen-to-square"
-                                        style="color: #777777;"></i>
+                                    <i class="fa-solid fa-pen-to-square" style="color: #777777;"></i>
                                 </button>
                             </td>
                         </tr>
                         <tr>
-                            <td class="has-text-grey">Gestor superior</td>
+                            <td class="has-text-grey">Gestor Global</td>
                             <td class="is-flex">
                                 <button class="button ml-3">
                                     <i class="fa-solid fa-trash" style="color: #777777;"></i>
                                 </button>
                                 <button class="button ml-3">
-                                    <i class="fa-solid fa-pen-to-square"
-                                        style="color: #777777;"></i>
+                                    <i class="fa-solid fa-pen-to-square" style="color: #777777;"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="custom-cards p-1 mt-4">
+                    <h1 class="p-2"><strong>Roles para resguardantes</strong></h1>
+                    <table class="table custom-table is-fullwidth mt-2 ">
+                        <tr class="m-1">
+                            <th class="has-text-grey-lighter">Rol</th>
+                            <th class="has-text-grey-lighter">Acciones</th>
+                        </tr>
+                        <tr>
+                            <td class="has-text-grey">Docente</td>
+                            <td class="is-flex">
+                                <button class="button ml-3">
+                                    <i class="fa-solid fa-trash" style="color: #777777;"></i>
+                                </button>
+                                <button class="button ml-3">
+                                    <i class="fa-solid fa-pen-to-square" style="color: #777777;"></i>
                                 </button>
                             </td>
                         </tr>
                         <tr>
-                            <td class="has-text-grey">
-                                Jefe de departamento
-                            </td>
+                            <td class="has-text-grey">Jefe de departamento</td>
                             <td class="is-flex">
                                 <button class="button ml-3">
                                     <i class="fa-solid fa-trash" style="color: #777777;"></i>
                                 </button>
                                 <button class="button ml-3">
-                                    <i class="fa-solid fa-pen-to-square"
-                                        style="color: #777777;"></i>
+                                    <i class="fa-solid fa-pen-to-square" style="color: #777777;"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-grey">Director</td>
+                            <td class="is-flex">
+                                <button class="button ml-3">
+                                    <i class="fa-solid fa-trash" style="color: #777777;"></i>
+                                </button>
+                                <button class="button ml-3">
+                                    <i class="fa-solid fa-pen-to-square" style="color: #777777;"></i>
                                 </button>
                             </td>
                         </tr>
@@ -64,14 +123,14 @@
             <div class="column is-12-tablet is-8-desktop is-mobile custom-cards">
                 <div>
                     <div class="is-flex">
-                        <h1 class="has-text-white">Administrador</h1>
+                        <h1 class="has-text-white">Privilegios de administrador</h1>
                         <div class="ml-auto switch-container is-flex is-align-items-center">
                             <input type="checkbox" id="switch-roles1" class="custom-switch">
                             <label for="switch-roles1"></label>
                         </div>
                     </div>
                     <div>
-                        <p class="has-text-white">Otorga todos los permisos de administrador al usuario seleccionado.
+                        <p class="has-text-grey">Otorga todos los permisos de administrador al usuario seleccionado.
                             A expceción de la gestión del centro de trabajo al que esta asignado
                         </p>
                     </div>
@@ -86,7 +145,7 @@
                         </div>
                     </div>
                     <div>
-                        <p class="has-text-white">
+                        <p class="has-text-grey">
                             El usuario tendra acceso a todo el registro de auditoria que se lleve hasta el momento.
                             Sin embargo, no podrá configurar los parametros del mismo.
                         </p>
@@ -102,8 +161,10 @@
                         </div>
                     </div>
                     <div>
-                        <p class="has-text-white">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis alias ullam nemo provident tempore perferendis aperiam deserunt illo aspernatur esse laboriosam voluptatum maxime voluptate ex mollitia dicta ducimus, commodi velit!
+                        <p class="has-text-grey">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis alias ullam nemo provident
+                            tempore perferendis aperiam deserunt illo aspernatur esse laboriosam voluptatum maxime
+                            voluptate ex mollitia dicta ducimus, commodi velit!
                         </p>
                     </div>
                     <hr>
@@ -117,8 +178,10 @@
                         </div>
                     </div>
                     <div>
-                        <p class="has-text-white">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatibus sequi, assumenda dolorem quidem velit? Blanditiis unde obcaecati porro ipsum, natus, sunt, inventore placeat reprehenderit cumque quod fugit voluptatem similique!
+                        <p class="has-text-grey">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatibus sequi, assumenda
+                            dolorem quidem velit? Blanditiis unde obcaecati porro ipsum, natus, sunt, inventore placeat
+                            reprehenderit cumque quod fugit voluptatem similique!
                         </p>
                     </div>
                     <hr>
@@ -132,8 +195,10 @@
                         </div>
                     </div>
                     <div>
-                        <p class="has-text-white">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus iusto fugit sit est magni quas in enim tempore consequuntur, voluptas accusamus rerum excepturi, dolore, expedita veniam nam temporibus doloremque qui!
+                        <p class="has-text-grey">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus iusto fugit sit est
+                            magni quas in enim tempore consequuntur, voluptas accusamus rerum excepturi, dolore,
+                            expedita veniam nam temporibus doloremque qui!
                         </p>
                     </div>
                     <hr>

@@ -29,11 +29,7 @@
                 </span>
             </div>
             <div class="navbar-end navbar-content navbar-item">
-                <form action="" method="post" class="mr-3">
-                    <input class="input is-small " type="text" placeholder="Buscar" />
-                </form>
-                <a class="navbar-item" href=""><img src="/icons/notificaciones.png" alt="Notificaciones"></a>
-                <a class="navbar-item" href=""><img src="/icons/config.png" alt="Configuración"></a>
+                <i class="fa-solid fa-user-gear" style="color: #ffffff;"></i>
             </div>
         </nav>
 
@@ -60,7 +56,7 @@
                         <img class="image is-16x16 mx-2"src="/icons/usuarios.png" alt="">
                         Resguardantes
                     </a>
-                    <a class="has-text-white is-flex is-align-items-center px-2">
+                    <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard?content=bienes">
                         <img class="image is-16x16 mx-2"src="/icons/bienes.png" alt="">
                         Bienes materiales
                     </a>
@@ -68,17 +64,13 @@
                         <img class="image is-16x16 mx-2"src="/icons/zona.png" alt="">
                         Áreas
                     </a>
-                    <a class="has-text-white is-flex is-align-items-center px-2" >
-                        <img class="image is-16x16 mx-2"src="/icons/auditoria.png" alt="">
-                        Historial de auditorias
+                    <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard?content=auditorias">
+                        <img class="image is-16x16 mx-2"src="/icons/auditoria.png" alt="" >
+                        Registro de auditorias
                     </a>
                     <a class="has-text-white is-flex is-align-items-center px-2">
                         <img class="image is-16x16 mx-2"src="/icons/herramienta.png" alt="">
                         Mantenimiento
-                    </a>
-                    <a class="has-text-white is-flex is-align-items-center px-2">
-                        <img class="image is-16x16 mx-2"src="/icons/documento.png" alt="">
-                        Reportes
                     </a>
                     <a class="has-text-white is-flex is-align-items-center px-2">
                         <img class="image is-16x16 mx-2"src="/icons/campana.png" alt="">
@@ -94,6 +86,7 @@
                 <%- include('components/dsh-components/' + content) %>
             </section>
         </div>
+
         
     </main>
 

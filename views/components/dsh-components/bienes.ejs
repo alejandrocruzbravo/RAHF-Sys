@@ -1,0 +1,283 @@
+<section class="container">
+    <div class="is-flex">
+        <label for="" class="is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-6-fullhd">Bienes
+            Materiales</label>
+        <label for="" class="is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-6-fullhd ml-auto">Instituto
+            Tecnológico de Chetumal</label>
+    </div>
+    <div class="container">
+        <div class="container is-flex mt-3 p-2 is-align-items-center">
+            <div>
+                <label class="label">Nombre del bien</label>
+                <form action="" class="is-flex">
+                    <input type="text" name="" id="" placeholder="Bien" class="input has-background-black-bis">
+                    <input type="submit" value="Buscar" class="button has-background-black-bis">
+                </form>
+            </div>
+            <div>
+                <label class="label">Filtrar por área</label>
+                <div class="control">
+                    <div class="select">
+                        <select>
+                            <option>Sin filtro</option>
+                            <option>Laboratorio de sistemas</option>
+                            <option>RR.HH</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label class="label">Filtrar por categoria</label>
+                <div class="control">
+                    <div class="select">
+                        <select>
+                            <option>Sin filtro</option>
+                            <option>Electronicos</option>
+                            <option>Oficina</option>
+                            <option>Jardinería</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="ml-auto">
+                <button class="button is-primary open-modal" data-target="modal-bien-new">Nuevo Bien</button>
+                <button class="button is-link open-modal">
+                    <i class="fa-solid fa-print mr-1" style="color: #ffffff;"></i>
+                    Reporte
+                </button>
+            </div>
+            <div class="modal" id="modal-bien-new">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Nuevo Bien</p>
+                        <button class="delete close-modal" aria-label="close"></button>
+                    </header>
+                    <section class="modal-card-body">
+                        <form action="">
+                            <div class="field">
+                                <label class="label">Número de serie</label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Número de serie">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Modelo</label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Modelo">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Marca</label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Marca">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Fecha de adquisición</label>
+                                <div class="control">
+                                    <input class="input" type="date" placeholder="Marca">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Valor del bien</label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Marca">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Documento soporte</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select>
+                                            <option>Seleccionar un tipo</option>
+                                            <option>Factura</option>
+                                            <option>Proveedor</option>
+                                            <option>Donación</option>
+                                            <option>Otros conceptos</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Área</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select>
+                                            <option>Seleccionar Área</option>
+                                            <option>RR.HH</option>
+                                            <option>Sistemas</option>
+                                            <option>Administración</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Categoria</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select>
+                                            <option>Seleccionar una categoria</option>
+                                            <option>Equipo de computo</option>
+                                            <option>Jardinería</option>
+                                            <option>Limpieza</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Numero de bienes</label>
+                                <div class="control">
+                                    <input class="input" type="text" value="1">
+                                </div>
+                            </div>
+                        </form>
+    
+                    </section>
+                    <footer class="modal-card-foot">
+                        <button class="button is-primary">Continuar</button>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3 p-2">
+            <div class="table-container">
+                <table class="table is-fullwidth custom-table">
+                    <thead>
+                        <tr>
+                            <th class="has-text-grey-lighter">Clave</th>
+                            <th class="has-text-grey-lighter">Nombre</th>
+                            <th class="has-text-grey-lighter">Resguardante</th>
+                            <th class="has-text-grey-lighter">Área</th>
+                            <th class="has-text-grey-lighter">Fecha de alta</th>
+                            <th class="has-text-grey-lighter">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="has-text-grey">EQP-001</td>
+                            <td class="has-text-grey">Proyector Epson X41+</td>
+                            <td class="has-text-grey">María López</td>
+                            <td class="has-text-grey">Audiovisuales</td>
+                            <td class="has-text-grey">2023-01-15</td>
+                            <td class="is-flex">
+                                <a class="button" href="/dashboard?content=bien-view">
+                                    <i class="fa-solid fa-eye" style="color: #ffffff;"></i>
+                                </a>
+                                <button class="button">
+                                    <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-grey">EQP-002</td>
+                            <td class="has-text-grey">Laptop Dell Latitude 5420</td>
+                            <td class="has-text-grey">Carlos Ramírez</td>
+                            <td class="has-text-grey">Sistemas</td>
+                            <td class="has-text-grey">2023-06-10</td>
+                            <td class="is-flex">
+                                <a class="button" href="/dashboard?content=">
+                                    <i class="fa-solid fa-eye" style="color: #ffffff;"></i>
+                                </a>
+                                <button class="button">
+                                    <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-grey">EQP-003</td>
+                            <td class="has-text-grey">Impresora HP LaserJet Pro M404</td>
+                            <td class="has-text-grey">Ana Torres</td>
+                            <td class="has-text-grey">Administración</td>
+                            <td class="has-text-grey">2022-11-03</td>
+                            <td class="is-flex">
+                                <a class="button" href="/dashboard?content=">
+                                    <i class="fa-solid fa-eye" style="color: #ffffff;"></i>
+                                </a>
+                                <button class="button">
+                                    <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-grey">EQP-004</td>
+                            <td class="has-text-grey">Pantalla Samsung 50"</td>
+                            <td class="has-text-grey">Luis Mendoza</td>
+                            <td class="has-text-grey">Sala de juntas</td>
+                            <td class="has-text-grey">2024-02-20</td>
+                            <td class="is-flex">
+                                <a class="button" href="/dashboard?content=">
+                                    <i class="fa-solid fa-eye" style="color: #ffffff;"></i>
+                                </a>
+                                <button class="button">
+                                    <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-grey">EQP-005</td>
+                            <td class="has-text-grey">Impresora Epson EcoTank</td>
+                            <td class="has-text-grey">Sofía Gómez</td>
+                            <td class="has-text-grey">Departamento de Finanzas</td>
+                            <td class="has-text-grey">2023-03-15</td>
+                            <td class="is-flex">
+                                <a class="button" href="/dashboard?content=">
+                                    <i class="fa-solid fa-eye" style="color: #ffffff;"></i>
+                                </a>
+                                <button class="button">
+                                    <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-grey">EQP-006</td>
+                            <td class="has-text-grey">Escáner de código de barras</td>
+                            <td class="has-text-grey">Juan Carlos</td>
+                            <td class="has-text-grey">Almacén</td>
+                            <td class="has-text-grey">2022-09-20</td>
+                            <td class="is-flex">
+                                <a class="button" href="/dashboard?content=">
+                                    <i class="fa-solid fa-eye" style="color: #ffffff;"></i>
+                                </a>
+                                <button class="button">
+                                    <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-grey">EQP-007</td>
+                            <td class="has-text-grey">Sistema de audio</td>
+                            <td class="has-text-grey">María Elena</td>
+                            <td class="has-text-grey">Sala de conferencias</td>
+                            <td class="has-text-grey">2024-01-10</td>
+                            <td class="is-flex">
+                                <a class="button" href="/dashboard?content=">
+                                    <i class="fa-solid fa-eye" style="color: #ffffff;"></i>
+                                </a>
+                                <button class="button">
+                                    <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+                <a href="#" class="pagination-previous">Previous</a>
+                <a href="#" class="pagination-next">Next page</a>
+                <ul class="pagination-list">
+                    <li><a href="#" class="pagination-link" aria-label="Goto page 1">1</a></li>
+                    <li><span class="pagination-ellipsis">&hellip;</span></li>
+                    <li><a href="#" class="pagination-link" aria-label="Goto page 45">45</a></li>
+                    <li>
+                        <a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a>
+                    </li>
+                    <li><a href="#" class="pagination-link" aria-label="Goto page 47">47</a></li>
+                    <li><span class="pagination-ellipsis">&hellip;</span></li>
+                    <li><a href="#" class="pagination-link" aria-label="Goto page 86">86</a></li>
+                </ul>
+            </nav>
+        </div>
+</section>

@@ -2,7 +2,7 @@
 
 <section class="container">
     <div class="is-flex">
-        <label for="" class="is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-6-fullhd">Gestor</label>
+        <label for="" class="is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-6-fullhd">Gestores</label>
         <label for="" class="is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-6-fullhd ml-auto">Instituto
             Tecnológico de Chetumal</label>
     </div>
@@ -16,6 +16,10 @@
         </div>
         <div class="ml-auto">
             <button class="button is-primary open-modal" data-target="modal-rsg-new">Nuevo Gestor</button>
+            <button class="button is-link open-modal">
+                <i class="fa-solid fa-print mr-1" style="color: #ffffff;"></i>
+                Reporte
+            </button>
         </div>
         <div class="modal" id="modal-rsg-new">
             <div class="modal-background"></div>
@@ -123,18 +127,6 @@
             <section class="modal-card-body">
                 <form action="">
                     <div class="field">
-                        <label class="label">Nombre</label>
-                        <div class="control">
-                            <input class="input" type="text" id="edit-nombre" placeholder="Nombre">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Apellidos</label>
-                        <div class="control">
-                            <input class="input" type="text" id="edit-apellidos" placeholder="Apellido">
-                        </div>
-                    </div>
-                    <div class="field">
                         <label class="label">Puesto/Cargo</label>
                         <div class="control">
                             <div class="select">
@@ -178,12 +170,6 @@
                         <label class="label">Correo</label>
                         <div class="control">
                             <input class="input" type="email" id="edit-correo" placeholder="Correo">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Número Teléfono</label>
-                        <div class="control">
-                            <input class="input" type="text" id="edit-telefono" placeholder="Número">
                         </div>
                     </div>
                     <div class="field">
