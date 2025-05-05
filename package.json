@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/alejandrocruzbravo/RAHF-Sys#readme",
   "dependencies": {
-    "bulma": "^1.0.3",
+    "bulma": "^1.0.4",
     "ejs": "^3.1.10",
     "express": "^4.21.2"
   }

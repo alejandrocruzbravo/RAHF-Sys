@@ -1,0 +1,646 @@
+<link rel="stylesheet" href="/styles/dsh-mantenimiento.css">
+
+<section class="container">
+    <div class="is-flex">
+        <label for="" class="is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-6-fullhd">Gestión de
+            Mantenimientos</label>
+        <label for="" class="is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-6-fullhd ml-auto">Instituto
+            Tecnológico de Chetumal</label>
+    </div>
+
+    <div class="container is-flex mb-3 mt-3">
+        <form action="" class="is-flex">
+            <input type="text" placeholder="Buscar plan de mantenimiento" class="input has-background-black-bis">
+            <input type="submit" value="Buscar" class="button has-background-black-bis">
+        </form>
+        <button class="button is-primary ml-auto open-modal" data-target="modal-mantenimiento-new">Nuevo Plan de
+            Mantenimiento</button>
+    </div>
+
+    <!-- Modal para crear nuevo plan de mantenimiento -->
+    <div class="modal" id="modal-mantenimiento-new">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Nuevo Plan de Mantenimiento</p>
+                <button class="delete close-modal" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <form action="">
+                    <div class="field">
+                        <label class="label">Nombre del Plan</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Nombre del plan de mantenimiento">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Descripción</label>
+                        <div class="control">
+                            <textarea class="textarea" placeholder="Descripción del plan de mantenimiento"></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Frecuencia</label>
+                        <div class="control">
+                            <div class="select">
+                                <select>
+                                    <option>Seleccionar frecuencia</option>
+                                    <option>Diario</option>
+                                    <option>Semanal</option>
+                                    <option>Mensual</option>
+                                    <option>Trimestral</option>
+                                    <option>Semestral</option>
+                                    <option>Anual</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Bienes a Mantener</label>
+                        <div class="control">
+                            <div class="select is-multiple">
+                                <select multiple size="5">
+                                    <option>Computadora de escritorio - LAB-SIS-001</option>
+                                    <option>Impresora láser - LAB-SIS-002</option>
+                                    <option>Proyector - AUL-001</option>
+                                    <option>Servidor - SER-001</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Responsable</label>
+                        <div class="control">
+                            <div class="select">
+                                <select>
+                                    <option>Seleccionar responsable</option>
+                                    <option>Juan Pérez</option>
+                                    <option>María García</option>
+                                    <option>Carlos López</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-primary">Guardar</button>
+                <button class="button close-modal">Cancelar</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Tarjetas de planes de mantenimiento -->
+    <div class="columns is-multiline mt-3">
+        <!-- Plan de Mantenimiento 1 -->
+        <div class="column is-4">
+            <div class="card card-mantenimiento" id="mantenimiento-1">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <span class="icon is-large">
+                                <i class="fas fa-tools fa-2x has-text-primary"></i>
+                            </span>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">Mantenimiento Preventivo Computadoras</p>
+                            <p class="subtitle is-6">Mensual</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="field is-grouped is-grouped-multiline">
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <span class="tag is-dark tooltip" data-tooltip="Responsable">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                    <span class="tag is-info">Juan Pérez</span>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <span class="tag is-dark tooltip" data-tooltip="Bienes">
+                                        <i class="fas fa-box"></i>
+                                    </span>
+                                    <span class="tag is-info">5 bienes</span>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <span class="tag is-dark tooltip" data-tooltip="Estado">
+                                        <i class="fas fa-check-circle"></i>
+                                    </span>
+                                    <span class="tag is-success">Activo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttons is-right">
+                        <button class="button is-info is-small view-mantenimiento"
+                            data-target="modal-view-mantenimiento-1">
+                            <span class="icon">
+                                <i class="fas fa-eye"></i>
+                            </span>
+                        </button>
+                        <button class="button is-warning is-small edit-mantenimiento"
+                            data-target="modal-edit-mantenimiento-1">
+                            <span class="icon">
+                                <i class="fas fa-pen"></i>
+                            </span>
+                        </button>
+                        <button class="button is-danger is-small delete-mantenimiento"
+                            data-target="modal-delete-mantenimiento-1">
+                            <span class="icon">
+                                <i class="fas fa-trash"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plan de Mantenimiento 2 -->
+        <div class="column is-4">
+            <div class="card card-mantenimiento" id="mantenimiento-2">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <span class="icon is-large">
+                                <i class="fas fa-server fa-2x has-text-success"></i>
+                            </span>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">Mantenimiento Servidores</p>
+                            <p class="subtitle is-6">Trimestral</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="field is-grouped is-grouped-multiline">
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <span class="tag is-dark tooltip" data-tooltip="Responsable">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                    <span class="tag is-info">María García</span>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <span class="tag is-dark tooltip" data-tooltip="Bienes">
+                                        <i class="fas fa-box"></i>
+                                    </span>
+                                    <span class="tag is-info">3 bienes</span>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <span class="tag is-dark tooltip" data-tooltip="Estado">
+                                        <i class="fas fa-clock"></i>
+                                    </span>
+                                    <span class="tag is-warning">Pendiente</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttons is-right">
+                        <button class="button is-info is-small view-mantenimiento"
+                            data-target="modal-view-mantenimiento-2">
+                            <span class="icon">
+                                <i class="fas fa-eye"></i>
+                            </span>
+                        </button>
+                        <button class="button is-warning is-small edit-mantenimiento"
+                            data-target="modal-edit-mantenimiento-2">
+                            <span class="icon">
+                                <i class="fas fa-pen"></i>
+                            </span>
+                        </button>
+                        <button class="button is-danger is-small delete-mantenimiento"
+                            data-target="modal-delete-mantenimiento-2">
+                            <span class="icon">
+                                <i class="fas fa-trash"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plan de Mantenimiento 3 -->
+        <div class="column is-4">
+            <div class="card card-mantenimiento" id="mantenimiento-3">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <span class="icon is-large">
+                                <i class="fas fa-bolt fa-2x has-text-warning"></i>
+                            </span>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">Mantenimiento Eléctrico General</p>
+                            <p class="subtitle is-6">Semestral</p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="field is-grouped is-grouped-multiline">
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <span class="tag is-dark tooltip" data-tooltip="Responsable">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                    <span class="tag is-info">Carlos López</span>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <span class="tag is-dark tooltip" data-tooltip="Bienes">
+                                        <i class="fas fa-box"></i>
+                                    </span>
+                                    <span class="tag is-info">8 bienes</span>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <span class="tag is-dark tooltip" data-tooltip="Estado">
+                                        <i class="fas fa-check-circle"></i>
+                                    </span>
+                                    <span class="tag is-success">Activo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons is-right">
+                        <button class="button is-info is-small view-mantenimiento"
+                            data-target="modal-view-mantenimiento-3">
+                            <span class="icon">
+                                <i class="fas fa-eye"></i>
+                            </span>
+                        </button>
+                        <button class="button is-warning is-small edit-mantenimiento"
+                            data-target="modal-edit-mantenimiento-3">
+                            <span class="icon">
+                                <i class="fas fa-pen"></i>
+                            </span>
+                        </button>
+                        <button class="button is-danger is-small delete-mantenimiento"
+                            data-target="modal-delete-mantenimiento-3">
+                            <span class="icon">
+                                <i class="fas fa-trash"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plan de Mantenimiento 4 -->
+        <div class="column is-4">
+            <div class="card card-mantenimiento" id="mantenimiento-4">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <span class="icon is-large">
+                                <i class="fas fa-fan fa-2x has-text-info"></i>
+                            </span>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">Mantenimiento Aire Acondicionado</p>
+                            <p class="subtitle is-6">Anual</p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="field is-grouped is-grouped-multiline">
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <span class="tag is-dark tooltip" data-tooltip="Responsable">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                    <span class="tag is-info">Ana Martínez</span>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <span class="tag is-dark tooltip" data-tooltip="Bienes">
+                                        <i class="fas fa-box"></i>
+                                    </span>
+                                    <span class="tag is-info">4 bienes</span>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <span class="tag is-dark tooltip" data-tooltip="Estado">
+                                        <i class="fas fa-check-circle"></i>
+                                    </span>
+                                    <span class="tag is-success">Activo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons is-right">
+                        <button class="button is-info is-small view-mantenimiento" data-target="#">
+                            <span class="icon">
+                                <i class="fas fa-eye"></i>
+                            </span>
+                        </button>
+                        <button class="button is-warning is-small edit-mantenimiento" data-target="#">
+                            <span class="icon">
+                                <i class="fas fa-pen"></i>
+                            </span>
+                        </button>
+                        <button class="button is-danger is-small delete-mantenimiento" data-target="#">
+                            <span class="icon">
+                                <i class="fas fa-trash"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plan de Mantenimiento 5 -->
+        <div class="column is-4">
+            <div class="card card-mantenimiento" id="mantenimiento-5">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <span class="icon is-large">
+                                <i class="fas fa-fire-extinguisher fa-2x has-text-danger"></i>
+                            </span>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">Mantenimiento Extintores</p>
+                            <p class="subtitle is-6">Anual</p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="field is-grouped is-grouped-multiline">
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <span class="tag is-dark tooltip" data-tooltip="Responsable">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                    <span class="tag is-info">Luis Torres</span>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <span class="tag is-dark tooltip" data-tooltip="Bienes">
+                                        <i class="fas fa-box"></i>
+                                    </span>
+                                    <span class="tag is-info">12 bienes</span>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <span class="tag is-dark tooltip" data-tooltip="Estado">
+                                        <i class="fas fa-check-circle"></i>
+                                    </span>
+                                    <span class="tag is-success">Activo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons is-right">
+                        <button class="button is-info is-small view-mantenimiento" data-target="#">
+                            <span class="icon">
+                                <i class="fas fa-eye"></i>
+                            </span>
+                        </button>
+                        <button class="button is-warning is-small edit-mantenimiento" data-target="#">
+                            <span class="icon">
+                                <i class="fas fa-pen"></i>
+                            </span>
+                        </button>
+                        <button class="button is-danger is-small delete-mantenimiento" data-target="#">
+                            <span class="icon">
+                                <i class="fas fa-trash"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plan de Mantenimiento 6 -->
+        <div class="column is-4">
+            <div class="card card-mantenimiento" id="mantenimiento-6">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <span class="icon is-large">
+                                <i class="fas fa-water fa-2x has-text-primary"></i>
+                            </span>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">Mantenimiento Sistema Hidroneumático</p>
+                            <p class="subtitle is-6">Trimestral</p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="field is-grouped is-grouped-multiline">
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <span class="tag is-dark tooltip" data-tooltip="Responsable">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                    <span class="tag is-info">Marta Ruiz</span>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <span class="tag is-dark tooltip" data-tooltip="Bienes">
+                                        <i class="fas fa-box"></i>
+                                    </span>
+                                    <span class="tag is-info">2 bienes</span>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <span class="tag is-dark tooltip" data-tooltip="Estado">
+                                        <i class="fas fa-check-circle"></i>
+                                    </span>
+                                    <span class="tag is-success">Activo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons is-right">
+                        <button class="button is-info is-small view-mantenimiento" data-target="#">
+                            <span class="icon">
+                                <i class="fas fa-eye"></i>
+                            </span>
+                        </button>
+                        <button class="button is-warning is-small edit-mantenimiento" data-target="#">
+                            <span class="icon">
+                                <i class="fas fa-pen"></i>
+                            </span>
+                        </button>
+                        <button class="button is-danger is-small delete-mantenimiento" data-target="#">
+                            <span class="icon">
+                                <i class="fas fa-trash"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para ver plan de mantenimiento -->
+    <div class="modal" id="modal-view-mantenimiento-1">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Detalles del Plan de Mantenimiento</p>
+                <button class="delete close-modal" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="content">
+                    <h4>Mantenimiento Preventivo Computadoras</h4>
+                    <p><strong>Frecuencia:</strong> Mensual</p>
+                    <p><strong>Responsable:</strong> Juan Pérez</p>
+                    <p><strong>Estado:</strong> Activo</p>
+                    <p><strong>Descripción:</strong> Mantenimiento preventivo mensual de computadoras del laboratorio de
+                        sistemas.</p>
+                    <p><strong>Bienes incluidos:</strong></p>
+                    <ul>
+                        <li>Computadora de escritorio - LAB-SIS-001</li>
+                        <li>Computadora de escritorio - LAB-SIS-002</li>
+                        <li>Computadora de escritorio - LAB-SIS-003</li>
+                        <li>Computadora de escritorio - LAB-SIS-004</li>
+                        <li>Computadora de escritorio - LAB-SIS-005</li>
+                    </ul>
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button close-modal">Cerrar</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal para editar plan de mantenimiento -->
+    <div class="modal" id="modal-edit-mantenimiento-1">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Editar Plan de Mantenimiento</p>
+                <button class="delete close-modal" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <form action="">
+                    <div class="field">
+                        <label class="label">Nombre del Plan</label>
+                        <div class="control">
+                            <input class="input" type="text" value="Mantenimiento Preventivo Computadoras">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Descripción</label>
+                        <div class="control">
+                            <textarea
+                                class="textarea">Mantenimiento preventivo mensual de computadoras del laboratorio de sistemas.</textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Frecuencia</label>
+                        <div class="control">
+                            <div class="select">
+                                <select>
+                                    <option>Mensual</option>
+                                    <option>Diario</option>
+                                    <option>Semanal</option>
+                                    <option>Trimestral</option>
+                                    <option>Semestral</option>
+                                    <option>Anual</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Bienes a Mantener</label>
+                        <div class="control">
+                            <div class="select is-multiple">
+                                <select multiple size="5">
+                                    <option selected>Computadora de escritorio - LAB-SIS-001</option>
+                                    <option selected>Computadora de escritorio - LAB-SIS-002</option>
+                                    <option selected>Computadora de escritorio - LAB-SIS-003</option>
+                                    <option selected>Computadora de escritorio - LAB-SIS-004</option>
+                                    <option selected>Computadora de escritorio - LAB-SIS-005</option>
+                                    <option>Impresora láser - LAB-SIS-006</option>
+                                    <option>Proyector - AUL-001</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Responsable</label>
+                        <div class="control">
+                            <div class="select">
+                                <select>
+                                    <option>Juan Pérez</option>
+                                    <option>María García</option>
+                                    <option>Carlos López</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-primary">Guardar Cambios</button>
+                <button class="button close-modal">Cancelar</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal para eliminar plan de mantenimiento -->
+    <div class="modal" id="modal-delete-mantenimiento-1">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Eliminar Plan de Mantenimiento</p>
+                <button class="delete close-modal" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <p>¿Estás seguro que deseas eliminar el plan de mantenimiento "Mantenimiento Preventivo Computadoras"?
+                </p>
+                <p class="has-text-danger">Esta acción no se puede deshacer.</p>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-danger">Eliminar</button>
+                <button class="button close-modal">Cancelar</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Script para manejar los modales -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Abrir modales
+            document.querySelectorAll('.view-mantenimiento, .edit-mantenimiento, .delete-mantenimiento').forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = button.getAttribute('data-target');
+                    document.getElementById(target).classList.add('is-active');
+                });
+            });
+
+            // Cerrar modales
+            document.querySelectorAll('.close-modal').forEach(button => {
+                button.addEventListener('click', () => {
+                    button.closest('.modal').classList.remove('is-active');
+                });
+            });
+
+            // Cerrar modal al hacer clic en el fondo
+            document.querySelectorAll('.modal-background').forEach(background => {
+                background.addEventListener('click', () => {
+                    background.closest('.modal').classList.remove('is-active');
+                });
+            });
+        });
+    </script>
+</section>

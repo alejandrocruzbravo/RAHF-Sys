@@ -1,0 +1,14 @@
+.card-mantenimiento {
+  min-height: 270px;
+  max-height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .card-mantenimiento {
+    min-height: 320px;
+    max-height: 320px;
+  }
+} 
