@@ -1,0 +1,388 @@
+.solicitudes-container {
+    padding: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--bulma-black-bis);
+    border-radius: 0.5rem;
+    color: var(--bulma-white);
+}
+
+.solicitudes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--bulma-black-ter);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.solicitudes-header h2 {
+    color: var(--bulma-white);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.filtros {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.filtro-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--bulma-black);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--bulma-white);
+    font-weight: 500;
+}
+
+.filtro-btn.active {
+    background-color: var(--bulma-primary);
+    color: var(--bulma-white);
+}
+
+.solicitud-card {
+    background: var(--bulma-black-ter);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    transition: transform 0.2s ease;
+    animation: fadeIn 0.3s ease-out;
+    color: var(--bulma-white);
+}
+
+.solicitud-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+}
+
+.solicitud-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.solicitud-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.solicitud-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--bulma-white);
+}
+
+.solicitud-fecha {
+    color: var(--bulma-grey-light);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.solicitud-estado {
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.solicitud-estado.pendiente {
+    background-color: var(--bulma-warning-light);
+    color: var(--bulma-warning-dark);
+}
+
+.solicitud-contenido {
+    margin: 0.75rem 0;
+    color: var(--bulma-grey-lighter);
+}
+
+.solicitud-contenido p {
+    margin: 0.25rem 0;
+}
+
+.solicitud-acciones {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.btn-aceptar, .btn-rechazar {
+    padding: 0.5rem 1.25rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.btn-aceptar {
+    background-color: var(--bulma-success);
+    color: var(--bulma-white);
+}
+
+.btn-rechazar {
+    background-color: var(--bulma-danger);
+    color: var(--bulma-white);
+}
+
+.btn-aceptar:hover {
+    background-color: var(--bulma-success-dark);
+}
+
+.btn-rechazar:hover {
+    background-color: var(--bulma-danger-dark);
+}
+
+/* Animaciones de Bulma */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Aplicar animaciones a los elementos */
+.box.has-background-black-ter {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.box.has-background-black-ter:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+}
+
+.button.is-dark {
+    transition: all 0.3s ease;
+}
+
+.button.is-dark:hover {
+    transform: translateY(-1px);
+}
+
+/* Animaciones del modal */
+.modal {
+    transition: opacity 0.3s ease;
+}
+
+.modal.is-active {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-card {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Efectos hover */
+.button.is-success:hover,
+.button.is-danger:hover {
+    transform: translateY(-1px);
+    transition: transform 0.2s ease;
+}
+
+/* Efectos de transición para los botones de filtro */
+.button.is-dark.is-primary {
+    transition: all 0.3s ease;
+    transform: scale(1.05);
+}
+
+/* Efectos para el tag de estado */
+.tag.is-warning.is-light {
+    transition: all 0.3s ease;
+}
+
+.tag.is-warning.is-light:hover {
+    transform: scale(1.05);
+}
+
+/* Efectos para el botón de cerrar */
+.delete {
+    transition: all 0.3s ease;
+}
+
+.delete:hover {
+    transform: scale(1.1);
+    background-color: var(--bulma-danger);
+}
+
+/* Efectos para las secciones del modal */
+.box.has-background-black {
+    transition: all 0.3s ease;
+}
+
+.box.has-background-black:hover {
+    transform: translateX(5px);
+}
+
+/* Scrollbar personalizado para el modal */
+.modal-card-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-card-body::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.modal-card-body::-webkit-scrollbar-thumb {
+    background: var(--bulma-primary);
+    border-radius: 4px;
+}
+
+.modal-card-body::-webkit-scrollbar-thumb:hover {
+    background: var(--bulma-primary-dark);
+}
+
+.solicitud-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-detalles {
+    padding: 4px 12px;
+    border: none;
+    border-radius: 15px;
+    background-color: #1a4b7a;
+    color: white;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-detalles:hover {
+    background-color: #2c3e50;
+    transform: translateY(-1px);
+}
+
+/* Estilos del Modal */
+.modal-detalles {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-detalles.active {
+    display: flex;
+}
+
+.modal-contenido {
+    background-color: var(--bulma-black-ter);
+    border-radius: 0.5rem;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--bulma-white);
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+.modal-header {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: var(--bulma-white);
+    font-size: 1.3rem;
+}
+
+.btn-cerrar {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--bulma-white);
+    cursor: pointer;
+    padding: 0 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.btn-cerrar:hover {
+    color: var(--bulma-danger);
+    transform: scale(1.1);
+}
+
+.modal-body {
+    padding: 1.25rem;
+}
+
+.detalle-seccion {
+    margin-bottom: 1.25rem;
+    background-color: var(--bulma-black);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detalle-seccion h4 {
+    color: var(--bulma-white);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.detalle-seccion p {
+    margin: 0.5rem 0;
+    color: var(--bulma-grey-lighter);
+}
+
+.detalle-valor {
+    color: var(--bulma-grey-light);
+    font-weight: 500;
+}
+
+/* Animación del modal */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
