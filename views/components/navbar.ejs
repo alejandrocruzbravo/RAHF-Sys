@@ -1,10 +1,10 @@
-<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+<nav class="navbar custom-navbar is-fixed-top has-background-black-bis" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a class="navbar-item" href="/">
+        <a class="navbar-item has-text-white hover-white" href="/">
             <img src="/icons/favicon.png" alt="">
         </a>
 
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <a role="button" class="navbar-burger has-text-white" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -12,44 +12,56 @@
         </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item  has-text-white" href="/acercaNosotros">
-                Acerca de nosotros
-            </a>
-
-            <a class="navbar-item  has-text-white" href="/precios">
-                Precios
-            </a>
-
-            <a class="navbar-item  has-text-white" href="/contactanos">
-                Contáctanos
-            </a>
-
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link  has-text-white">
-                    Soluciones
+    <div id="navbarBasicExample" class="navbar-menu has-background-black-bis">
+        <% if (locals.isCentroT) { %>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-danger has-text-white" href="/login">
+                            <strong>Cerrar sesión</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <% } else { %>
+            <div class="navbar-start">
+                <a class="navbar-item has-text-white hover-white" href="/acercaNosotros">
+                    Acerca de nosotros
                 </a>
 
-                <div class="navbar-dropdown">
-                    <a class="navbar-item">
-                        RAFH
-                    </a>
-                </div>
-            </div>
-        </div>
+                <a class="navbar-item has-text-white hover-white" href="/precios">
+                    Precios
+                </a>
 
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="buttons">
-                    <a class="button" href="/reg">
-                        <strong>Sign up</strong>
+                <a class="navbar-item has-text-white hover-white" href="/contactanos">
+                    Contáctanos
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link has-text-white hover-white">
+                        Soluciones
                     </a>
-                    <a class="button custom-button-primary" href="/login">
-                        Log in
-                    </a>
+
+                    <div class="navbar-dropdown has-background-black-bis">
+                        <a class="navbar-item has-text-white hover-white has-background-black-bis">
+                            RAFH Mobile
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-light" href="/reg">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button custom-button-primary has-text-white" href="/login">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <% } %>
     </div>
 </nav>

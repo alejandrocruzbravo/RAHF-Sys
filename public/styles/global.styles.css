@@ -1,3 +1,32 @@
+/* Tema por defecto (modo claro) */
+:root {
+    --background-color: #FBFBFB;
+    --text-color: #14161A;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #14161A;
+        --text-color: #eaeaea;
+    }
+}
+
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+    width: 100%;
+}
+
 @font-face {
     font-family: 'Audiowide'; /* Nombre que usarás para la fuente */
     src: url('/fonts/Audiowide.ttf') format('truetype');
@@ -23,4 +52,9 @@
 }
 .custom-button-primary{
     background-color: rgb(0, 60, 204);
+}
+
+.hover-white:hover {
+    color: white !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
 }

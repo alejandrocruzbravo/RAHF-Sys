@@ -1,3 +1,6 @@
+
+@import url(global.styles.css);
+
 /* Fuentes */
 @font-face {
     font-family: 'Audiowide';
@@ -15,7 +18,7 @@
 
 /* Header */
 .custom-section-first {
-    background-color: rgb(20, 22, 26);
+    background-color: var(--background-color);
     background-image: url('/images/bg-waves.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -40,18 +43,16 @@
 
 /* Sección de Precios */
 .section {
-    background-color: rgb(20, 22, 26);
+    background-color: var(--background-color);
     padding: 5rem 1.5rem;
 }
 
 .title {
-    color: white !important;
     font-family: 'Audiowide', sans-serif;
 }
 
 /* Tarjetas de Precios */
 .price-card {
-    background-color: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     padding: 2rem;
     height: 100%;
@@ -62,15 +63,6 @@
 .price-card:hover {
     transform: translateY(-10px);
 }
-
-/* .price-card.is-featured {
-    border: 2px solid #4a4af4;
-    transform: scale(1.05);
-}
-
-.price-card.is-featured:hover {
-    transform: scale(1.05) translateY(-10px);
-} */
 
 .price-card.is-featured {
     border: 2px solid #4a4af4;
@@ -109,7 +101,6 @@
 
 .price {
     font-size: 3rem;
-    color: white;
     font-weight: bold;
     margin: 1rem 0;
 }

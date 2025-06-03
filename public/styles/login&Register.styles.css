@@ -1,7 +1,7 @@
 @import url(global.styles.css);
 
 .custom-section-first{
-    background-color: rgb(20,22,26);
+    background-color: var(--background-color);
     background-image: url('/images/bg-waves.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -67,6 +67,10 @@
     font-size: 0.9rem;
     color: #f5f5f5;
 }
+.input::placeholder {
+    color: #a0a0a0;
+}
+
 
 .input:focus {
     outline: none;

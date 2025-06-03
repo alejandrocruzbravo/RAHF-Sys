@@ -6,10 +6,11 @@
     <link rel="shortcut icon" href="/icons/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/bulma/bulma.min.css">
     <link rel="stylesheet" href="/styles/centroT.styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>RAFH - Centros de Trabajo</title>
 </head>
 <body class="has-navbar-fixed-top">
-    <%- include('components/navbar') %>
+    <%- include('components/navbar', { isCentroT: true }) %>
 
     <!-- Banner de bienvenida -->
     <section class="hero is-primary custom-hero">
@@ -23,6 +24,20 @@
 
     <!-- Grid de centros de trabajo -->
     <section class="section">
+        <div class="buttons is-centered mt-5">
+            <a href="/crear-centro" class="button is-outlined-dark is-medium">
+                <span class="icon">
+                    <i class="fas fa-plus"></i>
+                </span>
+                <span>Crear Centro de Trabajo</span>
+            </a>
+            <a href="/unirse-centro" class="button is-info is-medium">
+                <span class="icon">
+                    <i class="fas fa-user-plus"></i>
+                </span>
+                <span>Unirse a un Centro</span>
+            </a>
+        </div>
         <div class="container">
             <div class="columns is-multiline">
                 <!-- Centro de trabajo 1 -->
@@ -35,8 +50,8 @@
                                 </figure>
                             </div>
                             <div class="card-content">
-                                <p class="title is-4 has-text-white custom-family-text">Tecnológico de Chetumal</p>
-                                <p class="subtitle is-6 has-text-white custom-family-text2">Sede central de operaciones</p>
+                                <p class="title is-4 custom-family-text">Tecnológico de Chetumal</p>
+                                <p class="subtitle is-6  custom-family-text2">Administrador</p>
                             </div>
                         </div>
                     </a>
@@ -51,8 +66,8 @@
                             </figure>
                         </div>
                         <div class="card-content">
-                            <p class="title is-4 has-text-white custom-family-text">Scotiabank</p>
-                            <p class="subtitle is-6 has-text-white custom-family-text2">Sucursal Bancaria Principal</p>
+                            <p class="title is-4 custom-family-text">Scotiabank</p>
+                            <p class="subtitle is-6 custom-family-text2">Administrador</p>
                         </div>
                     </div>
                 </div>
@@ -66,8 +81,8 @@
                             </figure>
                         </div>
                         <div class="card-content">
-                            <p class="title is-4 has-text-white custom-family-text">Starbucks</p>
-                            <p class="subtitle is-6 has-text-white custom-family-text2">Cafetería Plaza Las Américas</p>
+                            <p class="title is-4 custom-family-text">Starbucks</p>
+                            <p class="subtitle is-6 custom-family-text2">Gestor</p>
                         </div>
                     </div>
                 </div>
@@ -81,16 +96,14 @@
                             </figure>
                         </div>
                         <div class="card-content">
-                            <p class="title is-4 has-text-white custom-family-text">Chedraui</p>
-                            <p class="subtitle is-6 has-text-white custom-family-text2">Supermercado Zona Centro</p>
+                            <p class="title is-4 custom-family-text">Chedraui</p>
+                            <p class="subtitle is-6 custom-family-text2">Gestor</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <%- include('components/footer') %>
     <script src="/scripts/home.scripts.js"></script>
 </body>
 </html>

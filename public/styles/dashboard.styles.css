@@ -1,12 +1,14 @@
-body {
-    background-color: #16161E;
-    height: 100vh;
+@import url(global.styles.css);
+
+/* Layout principal */
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Navbar principal (siempre visible en PC) */
+/* Navbar principal */
 .custom-navbar {
-    position: fixed;
-    top: 0;
     width: 100%;
     height: 60px;
     background-color: #16161E;
@@ -14,92 +16,66 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
-    z-index: 1001;
 }
 
-/* Ocultar menú hamburguesa en PC */
-
-.menu-toggle {
-    display: none;
-}
-.menu-list a {
-    background-color: #16161E;
-    color: white;
-    padding: 0.75rem;
-    display: block;
-}
-.menu-list a:hover {
-    background-color: hsl(217, 71%, 53%);
+/* Contenedor principal */
+.main-container {
+    display: flex;
+    flex: 1;
 }
 
 /* Sidebar */
 .custom-aside-bar {
     width: 20%;
-    height: 100vh;
     background-color: #16161E;
     padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    color: white !important;
+}
+
+.menu-toggle:hover,
+.menu-toggle:active,
+.menu-toggle:focus {
+    color: white !important;
+    background-color: transparent !important;
+}
+
+.menu-toggle.is-active {
+    transform: rotate(90deg);
+}
+
+.menu-list a {
+    background-color: #16161E;
+    padding: 0.75rem;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.menu-list a:hover {
+    background-color: hsl(217, 71%, 53%);
+}
 
 /* Contenido principal */
 .custom-main-content {
     width: 80%;
-    padding-top: 4rem;
+    padding: 1rem;
 }
 
 .custom-main-section {
     width: 100%;
-    height: 100vh;
-    background-color: #1d1f2d;
+    min-height: calc(100vh - 60px);
+    background-color: var(--background-color);
     border-radius: 25px;
     padding: 1rem;
-}
-
-/* Estilos adicionales para dispositivos móviles */
-@media screen and (max-width: 768px) {
-    /* Mostrar menú hamburguesa */
-    .menu-toggle {
-        display: block;
-    }
-
-    /* Navbar se oculta en móviles y se mueve al sidebar */
-    .navbar-content {
-        display: none;
-    }
-
-    /* Sidebar se oculta por defecto */
-    .custom-aside-bar {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 250px;
-        height: 100vh;
-        transform: translateX(-100%);
-        z-index: 1000;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    /* Cuando el menú se abre */
-    .custom-aside-bar.is-active {
-        transform: translateX(0);
-    }
-
-    /* Navbar dentro del sidebar en móviles */
-    .mobile-navbar-content {
-        display: block;
-        padding: 1rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .mobile-navbar-content form {
-        margin-bottom: 1rem;
-    }
-
-    /* Ajustar contenido */
-    .custom-main-content {
-        width: 100%;
-        margin-left: 0;
-    }
 }
 .custom-switch {
     display: none;
@@ -184,4 +160,70 @@ body {
 .custom-switch:not(:checked) + label .switch-icon:last-child {
     opacity: 0;
 }
+/* Overlay para el menú en móvil */
+.overlay {
+    position: fixed;
+    top: 60px; /* para no tapar el navbar */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 900; /* debajo del aside pero encima del contenido */
+}
 
+.overlay.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .custom-main-section {
+        background-color: #14161A;
+    }
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 1023px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-container {
+        position: relative;
+    }
+
+    .custom-aside-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transform: translateX(-100%);
+        width: 40%;
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
+        
+    }
+
+    .custom-aside-bar.is-active {
+        transform: translateX(0);
+    }
+
+    .custom-main-content {
+        width: 100%;
+    }
+
+    /* Overlay para cuando el menú está abierto */
+    .custom-aside-bar.is-active::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}

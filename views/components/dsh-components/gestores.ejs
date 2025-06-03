@@ -10,8 +10,8 @@
     <div class="container is-flex mt-3 p-2">
         <div>
             <form action="" class="is-flex">
-                <input type="text" name="" id="" placeholder="Buscar gestor" class="input has-background-black-bis">
-                <input type="submit" value="Buscar" class="button has-background-black-bis">
+                <input type="text" name="" id="" placeholder="Buscar gestor" class="input">
+                <input type="submit" value="Buscar" class="button">
             </form>
         </div>
         <div class="ml-auto">
@@ -222,144 +222,102 @@
             <table class="table is-fullwidth custom-table">
                 <thead>
                     <tr>
-                        <th class="has-text-grey-lighter">Nombre</th>
-                        <th class="has-text-grey-lighter">Apellidos</th>
-                        <th class="has-text-grey-lighter">Puesto/Cargo</th>
-                        <th class="has-text-grey-lighter">Área</th>
-                        <th class="has-text-grey-lighter">Departamento</th>
-                        <th class="has-text-grey-lighter">Correo</th>
-                        <th class="has-text-grey-lighter">Número Teléfono</th>
-                        <th class="has-text-grey-lighter">Rol</th>
-                        <th class="has-text-grey-lighter">Acciones</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Puesto/Cargo</th>
+                        <th>Área</th>
+                        <th>Departamento</th>
+                        <th>Correo</th>
+                        <th>Rol</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td class="has-text-grey">Juan</td>
                         <td class="has-text-grey">Pérez</td>
-                        <td class="has-text-grey">Director de TI</td>
+                        <td class="has-text-grey">Director</td>
                         <td class="has-text-grey">Tecnologías</td>
                         <td class="has-text-grey">Sistemas</td>
                         <td class="has-text-grey">juan.perez@example.com</td>
-                        <td class="has-text-grey">983-123-4567</td>
-                        <td class="has-text-grey">Administrador</td>
-                        <td>
+                        <td class="has-text-grey">Gestor superior</td>
+                        <td class="is-flex is-align-items-center">
                             <button class="button open-modal" data-target="modal-edit">
-                                <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="19px" viewBox="0 -960 960 960" width="19px" fill="#737373"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
                             </button>
                             <button class="button open-modal" data-target="modal-delete">
-                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="19px" viewBox="0 -960 960 960" width="19px" fill="#737373"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
                             </button>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="has-text-grey">María</td>
-                        <td class="has-text-grey">García</td>
-                        <td class="has-text-grey">Coordinadora RH</td>
-                        <td class="has-text-grey">Recursos Humanos</td>
-                        <td class="has-text-grey">RR.HH</td>
-                        <td class="has-text-grey">maria.garcia@example.com</td>
-                        <td class="has-text-grey">983-234-5678</td>
-                        <td class="has-text-grey">Gestor</td>
-                        <td>
-                            <button class="button open-modal" data-target="modal-edit">
-                                <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
-                            </button>
-                            <button class="button open-modal" data-target="modal-delete">
-                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="has-text-grey">Carlos</td>
-                        <td class="has-text-grey">Hernández</td>
-                        <td class="has-text-grey">Jefe de Personal</td>
-                        <td class="has-text-grey">Administración</td>
-                        <td class="has-text-grey">RR.HH</td>
-                        <td class="has-text-grey">carlos.hernandez@example.com</td>
-                        <td class="has-text-grey">983-345-6789</td>
-                        <td class="has-text-grey">Jefe de departamento</td>
-                        <td>
-                            <button class="button open-modal" data-target="modal-edit">
-                                <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
-                            </button>
-                            <button class="button open-modal" data-target="modal-delete">
-                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="has-text-grey">Ana</td>
-                        <td class="has-text-grey">González</td>
-                        <td class="has-text-grey">Analista de Sistemas</td>
-                        <td class="has-text-grey">Tecnologías</td>
-                        <td class="has-text-grey">Sistemas</td>
-                        <td class="has-text-grey">ana.gonzalez@example.com</td>
-                        <td class="has-text-grey">983-456-7890</td>
-                        <td class="has-text-grey">Gestor</td>
-                        <td>
-                            <button class="button open-modal" data-target="modal-edit">
-                                <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
-                            </button>
-                            <button class="button open-modal" data-target="modal-delete">
-                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="has-text-grey">Pedro</td>
-                        <td class="has-text-grey">Martínez</td>
-                        <td class="has-text-grey">Coordinador Administrativo</td>
-                        <td class="has-text-grey">Finanzas</td>
-                        <td class="has-text-grey">Administración</td>
-                        <td class="has-text-grey">pedro.martinez@example.com</td>
-                        <td class="has-text-grey">983-567-8901</td>
-                        <td class="has-text-grey">Gestor</td>
-                        <td>
-                            <button class="button open-modal" data-target="modal-edit">
-                                <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
-                            </button>
-                            <button class="button open-modal" data-target="modal-delete">
-                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="has-text-grey">Laura</td>
-                        <td class="has-text-grey">Sánchez</td>
-                        <td class="has-text-grey">Jefa de Sistemas</td>
-                        <td class="has-text-grey">Tecnologías</td>
-                        <td class="has-text-grey">Sistemas</td>
-                        <td class="has-text-grey">laura.sanchez@example.com</td>
-                        <td class="has-text-grey">983-678-9012</td>
-                        <td class="has-text-grey">Jefe de departamento</td>
-                        <td>
-                            <button class="button open-modal" data-target="modal-edit">
-                                <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
-                            </button>
-                            <button class="button open-modal" data-target="modal-delete">
-                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="has-text-grey">Roberto</td>
-                        <td class="has-text-grey">López</td>
-                        <td class="has-text-grey">Administrador de Red</td>
-                        <td class="has-text-grey">Tecnologías</td>
-                        <td class="has-text-grey">Sistemas</td>
-                        <td class="has-text-grey">roberto.lopez@example.com</td>
-                        <td class="has-text-grey">983-789-0123</td>
-                        <td class="has-text-grey">Gestor</td>
-                        <td>
-                            <button class="button open-modal" data-target="modal-edit">
-                                <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
-                            </button>
-                            <button class="button open-modal" data-target="modal-delete">
-                                <i class="fa-solid fa-trash" style="color: #e15656;"></i>
-                            </button>
-                        </td>
-                    </tr>
+                <tr>
+                    <td class="has-text-grey">Pedro</td>
+                    <td class="has-text-grey">González</td>
+                    <td class="has-text-grey">Gerente</td>
+                    <td class="has-text-grey">Finanzas</td>
+                    <td class="has-text-grey">Contabilidad</td>
+                    <td class="has-text-grey">pedro.gonzalez@example.com</td>
+                    <td class="has-text-grey">Gestor</td>
+                    <td class="is-flex is-align-items-center">
+                        <button class="button open-modal" data-target="modal-edit">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="19px" viewBox="0 -960 960 960" width="19px" fill="#737373"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
+                        </button>
+                        <button class="button open-modal" data-target="modal-delete">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="19px" viewBox="0 -960 960 960" width="19px" fill="#737373"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="has-text-grey">Ana</td>
+                    <td class="has-text-grey">Martínez</td>
+                    <td class="has-text-grey">Director</td>
+                    <td class="has-text-grey">RR.HH</td>
+                    <td class="has-text-grey">Contabilidad</td>
+                    <td class="has-text-grey">ana.martinez@example.com</td>
+                    <td class="has-text-grey">Gestor</td>
+                    <td class="is-flex is-align-items-center">
+                        <button class="button open-modal" data-target="modal-edit">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="19px" viewBox="0 -960 960 960" width="19px" fill="#737373"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
+                        </button>
+                        <button class="button open-modal" data-target="modal-delete">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="19px" viewBox="0 -960 960 960" width="19px" fill="#737373"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="has-text-grey">Carlos</td>
+                    <td class="has-text-grey">Sánchez</td>
+                    <td class="has-text-grey">Jefe de Depto.</td>
+                    <td class="has-text-grey">Ingeniería</td>
+                    <td class="has-text-grey">Desarrollo</td>
+                    <td class="has-text-grey">carlos.sanchez@example.com</td>
+                    <td class="has-text-grey">Gestor</td>
+                    <td class="is-flex is-align-items-center">
+                        <button class="button open-modal" data-target="modal-edit">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="19px" viewBox="0 -960 960 960" width="19px" fill="#737373"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
+                        </button>
+                        <button class="button open-modal" data-target="modal-delete">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="19px" viewBox="0 -960 960 960" width="19px" fill="#737373"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="has-text-grey">Sofía</td>
+                    <td class="has-text-grey">Rodríguez</td>
+                    <td class="has-text-grey">Coordinador</td>
+                    <td class="has-text-grey">Vinculación</td>
+                    <td class="has-text-grey">Publicidad</td>
+                    <td class="has-text-grey">sofia.rodriguez@example.com</td>
+                    <td class="has-text-grey">Gestor</td>
+                    <td class="is-flex is-align-items-center">
+                        <button class="button open-modal" data-target="modal-edit">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="19px" viewBox="0 -960 960 960" width="19px" fill="#737373"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z"/></svg>
+                        </button>
+                        <button class="button open-modal" data-target="modal-delete">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="19px" viewBox="0 -960 960 960" width="19px" fill="#737373"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
+                        </button>
+                    </td>
+                </tr>
                 </tbody>
             </table>
         </div>

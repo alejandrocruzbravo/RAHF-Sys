@@ -49,7 +49,7 @@ app.get('/reg', (req, res) => {
 });
 
 app.get('/cen', (req, res) => {
-    res.render('centroT');
+    res.render('centroT', { isCentroT: true });
 });
 
 

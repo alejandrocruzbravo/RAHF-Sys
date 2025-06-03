@@ -13,13 +13,12 @@
 
 <body>
     <%- include('components/navbar') %>
-
         <!-- Header -->
         <section class="custom-section-first">
             <div class="custom-sf-div">
                 <div class="container has-text-centered">
                     <h1
-                        class="custom-family-text has-text-white has-text-center-desktop is-size-2-mobile is-size-1-tablet is-size-1-desktop is-size-1-fullhd">
+                        class="custom-family-text has-text-center-desktop is-size-2-mobile is-size-1-tablet is-size-1-desktop is-size-1-fullhd">
                         PRECIOS
                     </h1>
                     <h2
@@ -29,7 +28,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Planes de Precios -->
         <section class="section">
             <div class="container">
@@ -38,10 +36,10 @@
                 <div class="columns is-centered">
                     <!-- Plan Básico -->
                     <div class="column is-one-third">
-                        <div class="price-card with-border">
+                        <div class="price-card with-border has-background-black-bis">
                             <div class="price-header">
-                                <h3 class="title is-3">Básico</h3>
-                                <p class="price">$999<span>/mes</span></p>
+                                <h3 class="title is-3 has-text-white">Básico</h3>
+                                <p class="price has-text-white">$999<span>/mes</span></p>
                             </div>
                             <div class="price-features">
                                 <ul>
@@ -69,11 +67,11 @@
 
                     <!-- Plan Pro -->
                     <div class="column is-one-third">
-                        <div class="price-card is-featured">
+                        <div class="price-card is-featured has-background-black-bis">
                             <div class="featured-label">Más Popular</div>
                             <div class="price-header">
-                                <h3 class="title is-3">Profesional</h3>
-                                <p class="price">$1,999<span>/mes</span></p>
+                                <h3 class="title is-3 has-text-white">Profesional</h3>
+                                <p class="price has-text-white">$1,999<span>/mes</span></p>
                             </div>
                             <div class="price-features">
                                 <ul>
@@ -105,10 +103,10 @@
 
                     <!-- Plan Enterprise -->
                     <div class="column is-one-third">
-                        <div class="price-card with-border">
+                        <div class="price-card with-border has-background-black-bis">
                             <div class="price-header">
-                                <h3 class="title is-3">Enterprise</h3>
-                                <p class="price">$3,999<span>/mes</span></p>
+                                <h3 class="title is-3 has-text-white">Enterprise</h3>
+                                <p class="price has-text-white">$3,999<span>/mes</span></p>
                             </div>
                             <div class="price-features">
                                 <ul>
@@ -140,15 +138,7 @@
                 </div>
             </div>
         </section>
-
-        <footer class="footer">
-            <div class="content has-text-centered">
-                <p>
-                    <strong>RAFH System</strong> © 2024. Todos los derechos reservados.
-                </p>
-            </div>
-        </footer>
-
+        <%- include('components/footer') %>
         <script async type="text/javascript" src="/js/bulma.js"></script>
 </body>
 

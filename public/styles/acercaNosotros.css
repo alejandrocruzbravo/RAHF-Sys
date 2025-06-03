@@ -5,6 +5,7 @@
     overflow: hidden;
 }
 
+
 .card-content h3 {
     text-align: center;
 }
@@ -41,13 +42,6 @@ th {
     text-align: center;
     margin-top: 1em;
     margin-bottom: 3em;
-}
-
-.header-background {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/bg-waves.png');
-    background-color: rgb(2, 22, 26);
-    background-size: cover;
-    background-position: center;
 }
 
 .card {
@@ -87,7 +81,7 @@ th {
 }
 
 .custom-section-first {
-    background-color: rgb(20, 22, 26);
+    background-color: var(--background-color);
     background-image: url('/images/bg-waves.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -135,4 +129,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     vertical-align: middle;
+}
+.section-description{
+    background-color: var(--background-color);
 }

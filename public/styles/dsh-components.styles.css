@@ -9,8 +9,13 @@
 .custom-cards {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #16161E;
+    background-color: #F3F3F4;
 }
+.custom-cards a{
+    color: black;
+}
+
+
 .custom-shadow-cards-danger{
     box-shadow: 0px 1px 10px hsl(348, 100%, 61%)
 }
@@ -24,7 +29,6 @@
     box-shadow: 0px 1px 10px hsl(48, 100%, 67%)
 }
 .custom-link {
-    color: hsl(0, 0%, 29%);
     text-decoration: underline;
     font-weight: bolder;
     white-space: nowrap;
@@ -35,24 +39,22 @@
 .custom-table{
     height: auto;
     width: auto;
-    background-color: #16161E;
+    background-color: #F3F3F4;
 }
 .custom-border{
     border-radius: 10px;
     border: 1px solid hsl(0, 0%, 59%);
 }
 
-.custom-Input-Text{
-    width: 100%;
-    padding: 12px;
-    margin: 5px 0;
-    box-sizing: border-box;
-    border-radius: 4px;
-    resize: vertical;
-    background-color: #16161E;
-    color: white;
-}
-.custom-button{
-    padding: 12px;
-    background-color: #1d1f2d;
+@media (prefers-color-scheme: dark) {
+    .custom-cards {
+        background-color: var(--bulma-black-bis);
+    }
+    .custom-cards a{
+        color: white;
+    }
+    .custom-table{
+        background-color: var(--bulma-black-bis);
+    }
+
 }

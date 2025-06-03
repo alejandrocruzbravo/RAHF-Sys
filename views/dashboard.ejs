@@ -16,9 +16,8 @@
 </head>
 
 <body>
-    <main class="is-flex">
-        <!-- Navbar superior -->
-        <nav class="navbar is-dark custom-navbar">
+    <main>
+        <nav class="navbar custom-navbar">
             <div class="navbar-brand">
                 <a class="navbar-item has-text-white menu-toggle" onclick="toggleSidebar()">
                     <i class="fas fa-bars"></i>
@@ -32,84 +31,100 @@
                 <i class="fa-solid fa-user-gear" style="color: #ffffff;"></i>
             </div>
         </nav>
-
-        <!-- Sidebar -->
-        <aside id="sidebar" class="custom-aside-bar">
-            <div class="menu">
-
-                <!-- Menú principal -->
-                <p class="menu-label has-text-white mt-3">Menú</p>
-                <ul class="menu-list">
-                    <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard">
-                        <img class="image is-16x16 mx-2"src="/icons/overview.png" alt="">
-                        Vista general
-                    </a>
-                    <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard?content=workcenter">
-                        <img class="image is-16x16 mx-2"src="/icons/edificio.png" alt="">
-                        Centro de trabajo
-                    </a>
-                    <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard?content=gestores">
-                        <img class="image is-16x16 mx-2"src="/icons/gestor.png" alt="">
-                        Gestores
-                    </a>
-                    <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard?content=resguardantes">
-                        <img class="image is-16x16 mx-2"src="/icons/usuarios.png" alt="">
-                        Resguardantes
-                    </a>
-                    <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard?content=bienes">
-                        <img class="image is-16x16 mx-2"src="/icons/bienes.png" alt="">
-                        Bienes materiales
-                    </a>
-                    <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard?content=areas">
-                        <img class="image is-16x16 mx-2"src="/icons/zona.png" alt="">
-                        Áreas
-                    </a>
-                    <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard?content=auditorias">
-                        <img class="image is-16x16 mx-2"src="/icons/auditoria.png" alt="" >
-                        Registro de auditorias
-                    </a>
-                    <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard?content=mantenimiento">
-                        <img class="image is-16x16 mx-2"src="/icons/herramienta.png" alt="">
-                        Mantenimiento
-                    </a>
-                    <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard?content=solicitudes">
-                        <img class="image is-16x16 mx-2"src="/icons/campana.png" alt="">
-                        Solicitudes
-                    </a>
-                </ul>
+        <div class="main-container">
+            <aside id="sidebar" class="custom-aside-bar">
+                <div class="menu">
+                    <ul class="menu-list">
+                        <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard">
+                            <img class="image is-16x16 mx-2"src="/icons/overview.png" alt="">
+                            Vista general
+                        </a>
+                        <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard?content=workcenter">
+                            <img class="image is-16x16 mx-2"src="/icons/edificio.png" alt="">
+                            Centro de trabajo
+                        </a>
+                        <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard?content=gestores">
+                            <img class="image is-16x16 mx-2"src="/icons/gestor.png" alt="">
+                            Gestores
+                        </a>
+                        <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard?content=resguardantes">
+                            <img class="image is-16x16 mx-2"src="/icons/usuarios.png" alt="">
+                            Resguardantes
+                        </a>
+                        <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard?content=bienes">
+                            <img class="image is-16x16 mx-2"src="/icons/bienes.png" alt="">
+                            Bienes materiales
+                        </a>
+                        <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard?content=areas">
+                            <img class="image is-16x16 mx-2"src="/icons/zona.png" alt="">
+                            Áreas
+                        </a>
+                        <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard?content=auditorias">
+                            <img class="image is-16x16 mx-2"src="/icons/auditoria.png" alt="" >
+                            Registro de auditorias
+                        </a>
+                        <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard?content=mantenimiento">
+                            <img class="image is-16x16 mx-2"src="/icons/herramienta.png" alt="">
+                            Mantenimiento
+                        </a>
+                        <a class="has-text-white is-flex is-align-items-center px-2" href="/dashboard?content=solicitudes">
+                            <img class="image is-16x16 mx-2"src="/icons/campana.png" alt="">
+                            Solicitudes
+                        </a>
+                    </ul>
+                </div>
+            </aside>
+            <div class="overlay" id="sidebar-overlay"></div>
+            <div class="custom-main-content">
+                <section class="custom-main-section" id="dynamic-content">
+                    <%- include('components/dsh-components/' + content) %>
+                </section>
             </div>
-        </aside>
-
-        <!-- Contenido principal -->
-        <div class="custom-main-content">
-            <section class="custom-main-section" id="dynamic-content">
-                <%- include('components/dsh-components/' + content) %>
-            </section>
         </div>
-
-        
     </main>
-
     <script>
         function toggleSidebar() {
-            document.getElementById("sidebar").classList.toggle("is-active");
+            const sidebar = document.getElementById("sidebar");
+            const menuToggle = document.querySelector(".menu-toggle");
+            const overlay = document.getElementById("sidebar-overlay");
+
+            const isActive = sidebar.classList.toggle("is-active");
+            menuToggle.classList.toggle("is-active");
+            overlay.classList.toggle("is-active", isActive);
         }
-        function toggleSidebar() {
-            let sidebar = document.getElementById("sidebar");
-            sidebar.classList.toggle("is-active");
-        }
-        function toggleSubmenu(id) {
-        let submenus = document.querySelectorAll('.submenu');
-        submenus.forEach(submenu => {
-            if (submenu.id !== id) {
-                submenu.style.display = "none"; // Cerrar todos los submenús
-            }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const overlay = document.getElementById("sidebar-overlay");
+            const sidebar = document.getElementById("sidebar");
+            const menuToggle = document.querySelector(".menu-toggle");
+
+            overlay.addEventListener("click", function () {
+                sidebar.classList.remove("is-active");
+                overlay.classList.remove("is-active");
+                menuToggle.classList.remove("is-active");
+            });
+
+            // Cierra el overlay automáticamente al cambiar de tamaño
+            window.addEventListener("resize", function () {
+                if (window.innerWidth > 1023) {
+                    sidebar.classList.remove("is-active");
+                    overlay.classList.remove("is-active");
+                    menuToggle.classList.remove("is-active");
+                }
+            });
         });
 
-        let submenu = document.getElementById(id);
-        submenu.style.display = submenu.style.display === "block" ? "none" : "block"; // Alternar el submenú seleccionado
-    }
-    </script>
+        function toggleSubmenu(id) {
+            let submenus = document.querySelectorAll('.submenu');
+            submenus.forEach(submenu => {
+                if (submenu.id !== id) {
+                    submenu.style.display = "none";
+                }
+            });
 
-</body>
+            let submenu = document.getElementById(id);
+            submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        }
+    </script>
+    </body>
 </html>

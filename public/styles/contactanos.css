@@ -1,4 +1,6 @@
 /* Estilos del Header */
+@import url(global.styles.css);
+
 @font-face {
     font-family: 'Audiowide';
     src: url('/fonts/Audiowide.ttf') format('truetype');
@@ -14,7 +16,7 @@
 }
 
 .custom-section-first {
-    background-color: rgb(20, 22, 26);
+    background-color: var(--background-color);
     background-image: url('/images/bg-waves.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -39,19 +41,14 @@
 
 /* Estilos del formulario */
 .section {
-    background-color: rgb(20, 22, 26);
-    color: white;
+    background-color: var(--background-color);
     padding: 3rem 1.5rem;
 }
 
 .title {
-    color: white !important;
     font-family: 'Audiowide', sans-serif;
 }
 
-.is-size-4 {
-    color: #6c757d;
-}
 
 /* Estilos de los iconos sociales */
 .social-media {
@@ -82,19 +79,13 @@
     transform: translateY(-5px);
 }
 
-.label {
-    color: white;
-}
 
 .input, .textarea {
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
 }
 
-.input::placeholder, .textarea::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
+
 
 .input:focus, .textarea:focus {
     border-color: #4a4af4;
